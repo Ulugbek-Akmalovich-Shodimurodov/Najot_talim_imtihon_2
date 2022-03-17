@@ -2,13 +2,14 @@
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     font-family: 'poppins';
+    // background-color: #E5E5E5;
 }
 
 .container {
     width: 1400px;
     margin: 0 auto;
     padding: 15px 30px;
-    border: 1px solid #000;
+    // border: 1px solid #000;
 }
 
 .site-header {
@@ -149,6 +150,7 @@
     font-style: normal;
     font-weight: 600;
     font-size: 48px;
+    text-transform: capitalize;
     line-height: 80px;
     color: #000000;
 }
@@ -237,4 +239,226 @@
 .skills-cards__date {
     margin-left: 20px;
     text-align: left;
+}
+
+.site-about_us {
+    display: flex;
+    margin: 100px auto;
+    justify-content: space-between;
+}
+
+.about_us-date {
+    width: 50%;
+}
+
+.site-about_us__title {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 80px;
+    color: #000000;
+}
+
+.about_us__text {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #8F95A5;
+}
+
+.about_us-statistics {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.about_us-date__item {}
+
+.about_us-date__number {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 80px;
+    color: #2A3246;
+}
+
+.about_us-date__text {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #8F95A5;
+}
+
+.site-pricing {
+    margin: 50px auto;
+}
+
+.site-pricing__title {
+    text-align: center;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 80px;
+    color: #000000;
+}
+
+.site-pricing__cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pricing-card__self_course {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.pricing-card__img {
+    width: 350px;
+    height: 350px;
+}
+
+.pricing-card__date {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 300px;
+}
+
+.card-title {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 48px;
+    color: #263238;
+}
+
+.pricing-card__text {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #8F95A5;
+}
+
+.pricing-card__button {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 240px;
+    height: 45px;
+    left: 130px;
+    top: 3624px;
+    background: #EEEEEE;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 45px;
+    color: #263238;
+}
+
+.button-text {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: #546269;
+}
+
+.site-contact_us {
+    display: flex;
+    margin: 200px auto;
+    justify-content: space-between;
+}
+
+.site-contact_us__date {
+    width: 60%;
+}
+
+.site-contact_us__title {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 80px;
+    color: #000000;
+}
+
+.site-contact_us__text {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #8F95A5;
+}
+
+.mail {
+    width: 450px;
+    height: 80px;
+    padding-left: 30px;
+    border: 1px solid #8F95A5;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.mail_button {
+    width: 264px;
+    height: 80px;
+    background: #263238;
+    border-radius: 10px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: #FFFFFF;
+}
+
+.site-bootom-line {
+    width: 1340px;
+}
+
+.site-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-footer__logo {
+    display: block;
+}
+
+.footer-link__list {
+    display: flex;
+}
+
+.footer-list__item {
+    margin-left: 30px;
+    list-style-type: disc;
+}
+
+.footer-list__link {
+    text-decoration: none;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: #8F95A5;
 }
