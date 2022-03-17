@@ -74,9 +74,6 @@
     font-family: Poppins;
     font-size: 20px;
     font-style: normal;
-    font-weight: 500;
-    line-height: 30px;
-    letter-spacing: 0em;
     text-align: left;
     border: 2px solid #263238;
     -webkit-box-sizing: border-box;
@@ -141,9 +138,20 @@
     width: 48%;
 }
 
-.site-skills {}
+.site-skills {
+    margin: 40px auto;
+}
 
-.site-skills__title {}
+.site-skills__title {
+    margin: 100px auto;
+    text-align: center;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 80px;
+    color: #000000;
+}
 
 .skills-cards {
     display: grid;
@@ -152,8 +160,8 @@
 }
 
 .skills-card__speaking {
+    position: relative;
     text-align: center;
-    border: 1px solid #000;
     grid-row-start: 1;
     grid-row-end: 3;
     height: 894px;
@@ -162,17 +170,27 @@
     background: #F5F5F5;
 }
 
-.skills-cards__title {}
+.skills-cards__title {
+    font-family: Poppins;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: left;
+}
 
-.skills-cards__text {}
+.skills-cards__text {
+    line-height: 1.5;
+    width: 90%;
+}
 
 .cards-button {
-    position: relative;
+    position: absolute;
     display: flex;
     height: 60px;
     width: 218px;
+    bottom: 30px;
     margin-top: 50px;
-    margin-bottom: 50px;
     text-decoration: none;
     justify-content: center;
     align-items: center;
@@ -187,8 +205,8 @@
 }
 
 .skills-card__writing {
+    position: relative;
     text-align: center;
-    border: 1px solid #000;
     height: 531px;
     width: 434px;
     border-radius: 10px;
@@ -196,8 +214,8 @@
 }
 
 .skills-card__reading {
+    position: relative;
     text-align: center;
-    border: 1px solid #000;
     height: 531px;
     width: 434px;
     border-radius: 10px;
@@ -205,9 +223,9 @@
 }
 
 .skills-card__listening {
+    position: relative;
     display: flex;
     align-items: center;
-    border: 1px solid #000;
     grid-column-start: 2;
     grid-column-end: 4;
     height: 343px;
