@@ -1,0 +1,36 @@
+.container {
+    width: 1400px;
+    margin: 0 auto;
+    padding: 15px 30px;
+    border: 1px solid #000;
+}
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-logo {
+    display: flex;
+}
+
+.site-logo__img {}
+
+.site-nav {
+    display: flex;
+}
+
+.site-nav__list {
+    display: flex;
+}
+
+.site-nav__item {
+    margin: 0 30px;
+}
+
+.site-nav__link {}
+
+.site-call {
+    display: flex;
+}
