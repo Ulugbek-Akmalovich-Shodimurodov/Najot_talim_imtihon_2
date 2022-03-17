@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 * {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -82,7 +89,11 @@
 }
 
 .site-learn_language {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
@@ -154,7 +165,9 @@
 }
 
 .skills-cards {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 32% 2% 32% 2% 32%;
     grid-template-columns: 32% 32% 32%;
     gap: 2%;
 }
@@ -163,6 +176,7 @@
     position: relative;
     text-align: center;
     grid-row-start: 1;
+    -ms-grid-row-span: 2;
     grid-row-end: 3;
     height: 894px;
     width: 435px;
@@ -186,13 +200,19 @@
 
 .cards-button {
     position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     height: 60px;
     width: 218px;
     bottom: 30px;
     margin-top: 50px;
     text-decoration: none;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     border-radius: 5px;
     background: #263238;
@@ -224,9 +244,14 @@
 
 .skills-card__listening {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     grid-column-start: 2;
+    -ms-grid-column-span: 2;
     grid-column-end: 4;
     height: 343px;
     width: 885px;
@@ -240,8 +265,12 @@
 }
 
 .site-about_us {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin: 100px auto;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
@@ -268,13 +297,16 @@
 }
 
 .about_us-statistics {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     text-align: center;
 }
 
-.about_us-date__item {}
-
+// .about_us-date__item {}
 .about_us-date__number {
     font-family: 'Poppins';
     font-style: normal;
@@ -308,14 +340,25 @@
 }
 
 .site-pricing__cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
 .pricing-card__self_course {
     width: 30%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
 }
 
@@ -325,9 +368,17 @@
 }
 
 .pricing-card__date {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
     height: 300px;
 }
@@ -351,8 +402,13 @@
 }
 
 .pricing-card__button {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
     width: 240px;
     height: 45px;
@@ -379,8 +435,12 @@
 }
 
 .site-contact_us {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin: 200px auto;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
@@ -411,6 +471,7 @@
     height: 80px;
     padding-left: 30px;
     border: 1px solid #8F95A5;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border-radius: 10px;
 }
@@ -433,8 +494,14 @@
 }
 
 .site-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -443,6 +510,8 @@
 }
 
 .footer-link__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
