@@ -156,22 +156,52 @@
     border: 1px solid #000;
     grid-row-start: 1;
     grid-row-end: 3;
+    height: 894px;
+    width: 435px;
+    border-radius: 10px;
+    background: #F5F5F5;
 }
 
 .skills-cards__title {}
 
 .skills-cards__text {}
 
-.cards-button {}
+.cards-button {
+    position: relative;
+    display: flex;
+    height: 60px;
+    width: 218px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background: #263238;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: #FFFFFF;
+}
 
 .skills-card__writing {
     text-align: center;
     border: 1px solid #000;
+    height: 531px;
+    width: 434px;
+    border-radius: 10px;
+    background: #F5F5F5;
 }
 
 .skills-card__reading {
     text-align: center;
     border: 1px solid #000;
+    height: 531px;
+    width: 434px;
+    border-radius: 10px;
+    background: #F5F5F5;
 }
 
 .skills-card__listening {
@@ -180,6 +210,10 @@
     border: 1px solid #000;
     grid-column-start: 2;
     grid-column-end: 4;
+    height: 343px;
+    width: 885px;
+    border-radius: 10px;
+    background: #F5F5F5;
 }
 
 .skills-cards__date {
