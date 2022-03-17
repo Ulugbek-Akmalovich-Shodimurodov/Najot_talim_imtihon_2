@@ -1,3 +1,9 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'poppins';
+}
+
 .container {
   width: 1400px;
   margin: 0 auto;
@@ -6,21 +12,29 @@
 }
 
 .site-header {
+  z-index: 1;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fff;
 }
 
 .site-logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
+}
+
+.site-logo__img {
+  height: 54px;
+  width: 156px;
 }
 
 .site-nav {
@@ -37,11 +51,142 @@
 
 .site-nav__item {
   margin: 0 30px;
+  text-decoration: none;
+  list-style: none;
+}
+
+.site-nav__link {
+  text-decoration: none;
+  text-transform: capitalize;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #263238;
 }
 
 .site-call {
+  text-decoration: none;
+  padding: 10px 40px;
+  text-transform: capitalize;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+  border: 2px solid #263238;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 5px;
+  color: #000000;
+}
+
+.site-learn_language {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.site-hero__text {
+  position: relative;
+  width: 48%;
+}
+
+.site-hero__title {
+  font-family: Poppins;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 80px;
+  text-transform: capitalize;
+  text-align: left;
+}
+
+.hero__text {
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 36px;
+  text-align: left;
+}
+
+.hero__button {
+  display: inline-block;
+  text-decoration: none;
+  padding: 30px 90px;
+  background-color: #263238;
+  color: #fff;
+  border-radius: 15px;
+}
+
+.button {
+  font-family: Poppins;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 54px;
+}
+
+.site-hero__icon {
+  position: absolute;
+  top: 150px;
+  right: 100px;
+}
+
+.site-hero__img {
+  width: 48%;
+}
+
+.skills-cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 32% 32% 32%;
+      grid-template-columns: 32% 32% 32%;
+  gap: 2%;
+}
+
+.skills-card__speaking {
+  text-align: center;
+  border: 1px solid #000;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.skills-card__writing {
+  text-align: center;
+  border: 1px solid #000;
+}
+
+.skills-card__reading {
+  text-align: center;
+  border: 1px solid #000;
+}
+
+.skills-card__listening {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #000;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+.skills-cards__date {
+  margin-left: 20px;
+  text-align: left;
 }
 /*# sourceMappingURL=styles.css.map */
