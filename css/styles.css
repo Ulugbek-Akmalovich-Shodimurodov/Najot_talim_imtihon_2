@@ -1,534 +1,587 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.3.6,
-* Autoprefixer: v10.3.1
-* Browsers: last 4 version
-*/
-
-* {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    font-family: 'poppins';
-}
-
-.container {
-    width: 1400px;
-    margin: 0 auto;
-    padding: 15px 30px;
-}
-
-.site-header {
-    z-index: 1;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    background-color: #fff;
-}
-
-.site-logo {
-    display: block;
-}
-
-.site-logo__img {
-    height: 54px;
-    width: 156px;
-}
-
-.site-nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-}
-
-.site-nav__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-}
-
-.site-nav__item {
-    margin: 0 30px;
-    text-decoration: none;
-    list-style: none;
-}
-
-.site-nav__link {
-    text-decoration: none;
-    text-transform: capitalize;
-    font-family: Poppins;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 30px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: #263238;
-}
-
-.site-call {
-    text-decoration: none;
-    padding: 10px 40px;
-    text-transform: capitalize;
-    font-family: Poppins;
-    font-size: 20px;
-    font-style: normal;
-    text-align: left;
-    border: 2px solid #263238;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    border-radius: 5px;
-    color: #000000;
-}
-
-.site-learn_language {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-}
-
-.site-hero__text {
-    position: relative;
-    width: 48%;
-}
-
-.site-hero__title {
-    font-family: Poppins;
-    font-size: 64px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 80px;
-    text-transform: capitalize;
-    text-align: left;
-}
-
-.hero__text {
-    font-family: Poppins;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 36px;
-    text-align: left;
-}
-
-.hero__button {
-    display: inline-block;
-    text-decoration: none;
-    padding: 30px 90px;
-    background-color: #263238;
-    color: #fff;
-    border-radius: 15px;
-}
-
-.button {
-    font-family: Poppins;
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 54px;
-}
-
-.site-hero__icon {
-    position: absolute;
-    top: 150px;
-    right: 100px;
-}
-
-.site-hero__img {
-    width: 48%;
-}
-
-.site-skills {
-    margin: 40px auto;
-}
-
-.site-skills__title {
-    margin: 100px auto;
-    text-align: center;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 48px;
-    text-transform: capitalize;
-    line-height: 80px;
-    color: #000000;
-}
-
-.skills-cards {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 32% 2% 32% 2% 32%;
-    grid-template-columns: 32% 32% 32%;
-    gap: 2%;
-}
-
-.skills-card__speaking {
-    position: relative;
-    text-align: center;
-    grid-row-start: 1;
-    -ms-grid-row-span: 2;
-    grid-row-end: 3;
-    height: 894px;
-    width: 435px;
-    border-radius: 10px;
-    background: #F5F5F5;
-}
-
-.skills-cards__title {
-    font-family: Poppins;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 30px;
-    text-align: left;
-}
-
-.skills-cards__text {
-    line-height: 1.5;
-    width: 90%;
-}
-
-.cards-button {
-    position: absolute;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    height: 60px;
-    width: 218px;
-    bottom: 30px;
-    margin-top: 50px;
-    text-decoration: none;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    border-radius: 5px;
-    background: #263238;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 30px;
-    color: #FFFFFF;
-}
-
-.skills-card__writing {
-    position: relative;
-    text-align: center;
-    height: 531px;
-    width: 434px;
-    border-radius: 10px;
-    background: #F5F5F5;
-}
-
-.skills-card__reading {
-    position: relative;
-    text-align: center;
-    height: 531px;
-    width: 434px;
-    border-radius: 10px;
-    background: #F5F5F5;
-}
-
-.skills-card__listening {
-    position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    grid-column-start: 2;
-    -ms-grid-column-span: 2;
-    grid-column-end: 4;
-    height: 343px;
-    width: 885px;
-    border-radius: 10px;
-    background: #F5F5F5;
-}
-
-.skills-cards__date {
-    margin-left: 20px;
-    text-align: left;
-}
-
-.site-about_us {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin: 100px auto;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-}
-
-.about_us-date {
-    width: 50%;
-}
-
-.site-about_us__title {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 48px;
-    line-height: 80px;
-    color: #000000;
-}
-
-.about_us__text {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 30px;
-    color: #8F95A5;
-}
-
-.about_us-statistics {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    text-align: center;
-}
-
-.about_us-date__number {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 48px;
-    line-height: 80px;
-    color: #2A3246;
-}
-
-.about_us-date__text {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 30px;
-    color: #8F95A5;
-}
-
-.site-pricing {
-    margin: 50px auto;
-}
-
-.site-pricing__title {
-    text-align: center;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 48px;
-    line-height: 80px;
-    color: #000000;
-}
-
-.site-pricing__cards {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-}
-
-.pricing-card__self_course {
-    width: 30%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-}
-
-.pricing-card__img {
-    width: 350px;
-    height: 350px;
-}
-
-.pricing-card__date {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
-    height: 300px;
-}
-
-.card-title {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 30px;
-    line-height: 48px;
-    color: #263238;
-}
-
-.pricing-card__text {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 30px;
-    color: #8F95A5;
-}
-
-.pricing-card__button {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-    width: 240px;
-    height: 45px;
-    left: 130px;
-    top: 3624px;
-    background: #EEEEEE;
-    border-radius: 5px;
-    text-decoration: none;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 45px;
-    color: #263238;
-}
-
-.button-text {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 27px;
-    color: #546269;
-}
-
-.site-contact_us {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin: 200px auto;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-}
-
-.site-contact_us__date {
-    width: 60%;
-}
-
-.site-contact_us__title {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 48px;
-    line-height: 80px;
-    color: #000000;
-}
-
-.site-contact_us__text {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 30px;
-    color: #8F95A5;
-}
-
-.mail {
-    width: 450px;
-    height: 80px;
-    padding-left: 30px;
-    border: 1px solid #8F95A5;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    border-radius: 10px;
-}
-
-.mail_button {
-    width: 264px;
-    height: 80px;
-    background: #263238;
-    border-radius: 10px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 30px;
-    color: #FFFFFF;
-}
-
-.site-bootom-line {
-    width: 1340px;
-}
-
-.site-footer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-}
-
-.site-footer__logo {
-    display: block;
-}
-
-.footer-link__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-}
-
-.footer-list__item {
-    margin-left: 30px;
-    list-style-type: disc;
-}
-
-.footer-list__link {
-    text-decoration: none;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 36px;
-    color: #8F95A5;
-}
-
-
-/*# sourceMappingURL=styles.css.map */
+    * {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        font-family: 'poppins';
+        background: #E5E5E5;
+    }
+    
+    .container {
+        width: 1600px;
+        margin: 0 auto;
+        padding: 15px 130px;
+        border: 1px solid #000;
+    }
+    
+    .site-background-color {
+        background-color: #fff;
+    }
+    
+    .site-header {
+        z-index: 1;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        background-color: #fff;
+    }
+    
+    .site-logo {
+        display: block;
+    }
+    
+    .site-logo__img {
+        height: 54px;
+        width: 156px;
+        background-color: #fff;
+    }
+    
+    .site-nav {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    
+    .site-nav__list {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        background-color: #fff;
+    }
+    
+    .site-nav__item {
+        margin: 0 30px;
+        text-decoration: none;
+        list-style: none;
+        background-color: #fff;
+    }
+    
+    .site-nav__link {
+        text-decoration: none;
+        text-transform: capitalize;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 30px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #263238;
+        background-color: #fff;
+    }
+    
+    .site-call {
+        text-decoration: none;
+        padding: 10px 40px;
+        text-transform: capitalize;
+        font-size: 20px;
+        font-style: normal;
+        text-align: left;
+        border: 2px solid #263238;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        border-radius: 5px;
+        color: #000000;
+    }
+    
+    .site-hero {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        background-color: #fff;
+    }
+    
+    .site-hero__text {
+        position: relative;
+        background-color: #fff;
+    }
+    
+    .site-hero__title {
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 80px;
+        text-transform: capitalize;
+        color: #000000;
+        background-color: #fff;
+        font-size: 64px;
+        text-align: left;
+    }
+    
+    .site-hero__text {
+        font-style: normal;
+        font-weight: 400;
+        line-height: 30px;
+        text-align: left;
+        color: #8F95A5;
+        font-size: 24px;
+        width: 78%;
+        background-color: #fff;
+    }
+    
+    .site-hero__button {
+        display: inline-block;
+        text-decoration: none;
+        padding: 30px 90px;
+        background-color: #263238;
+        color: #fff;
+        border-radius: 15px;
+    }
+    
+    .site-hero__icon {
+        position: absolute;
+        top: 150px;
+        right: 100px;
+        background-color: #fff;
+    }
+    
+    .site-hero__img {
+        width: 48%;
+        background-color: #fff;
+    }
+    
+    .site-skills {
+        margin: 40px auto;
+        background-color: #fff;
+    }
+    
+    .site-skills__title {
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 80px;
+        text-transform: capitalize;
+        color: #000000;
+        background-color: #fff;
+        margin: 100px auto;
+        text-align: center;
+    }
+    
+    .skills-cards {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 32% 2% 32% 2% 32%;
+        grid-template-columns: 32% 32% 32%;
+        gap: 2%;
+        background-color: #fff;
+    }
+    
+    .skills-cards__speaking {
+        position: relative;
+        text-align: center;
+        grid-row-start: 1;
+        -ms-grid-row-span: 2;
+        grid-row-end: 3;
+        height: 894px;
+        width: 435px;
+        border-radius: 10px;
+        background: #F5F5F5;
+    }
+    
+    .skills-cards__writing {
+        position: relative;
+        text-align: center;
+        height: 531px;
+        width: 434px;
+        border-radius: 10px;
+        background: #F5F5F5;
+    }
+    
+    .skills-cards__reading {
+        position: relative;
+        text-align: center;
+        height: 531px;
+        width: 434px;
+        border-radius: 10px;
+        background: #F5F5F5;
+    }
+    
+    .skills-cards__listening {
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        grid-column-start: 2;
+        -ms-grid-column-span: 2;
+        grid-column-end: 4;
+        height: 343px;
+        width: 885px;
+        border-radius: 10px;
+        background: #F5F5F5;
+    }
+    
+    .skills-cards__img {
+        background: #F5F5F5;
+    }
+    
+    .skills-cards__title {
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 30px;
+        text-align: left;
+        background: #F5F5F5;
+    }
+    
+    .skills-cards__text {
+        font-style: normal;
+        font-weight: 400;
+        line-height: 30px;
+        text-align: left;
+        color: #8F95A5;
+        width: 90%;
+        background: #F5F5F5;
+    }
+    
+    .skills-cards .cards-button {
+        position: absolute;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        height: 60px;
+        width: 218px;
+        bottom: 30px;
+        margin-top: 50px;
+        text-decoration: none;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        border-radius: 5px;
+        background: #263238;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 30px;
+        color: #FFFFFF;
+    }
+    
+    .skills-cards__date {
+        margin-left: 20px;
+        background: #F5F5F5;
+    }
+    
+    .site-about_us {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        margin: 100px auto;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        background-color: #fff;
+    }
+    
+    .site-about_us .about_us-date {
+        width: 50%;
+        background-color: #fff;
+    }
+    
+    .site-about_us .about_us__text {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+        color: #8F95A5;
+        background-color: #fff;
+    }
+    
+    .site-about_us .about_us-statistics {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        text-align: center;
+        background-color: #fff;
+    }
+    
+    .site-about_us .about_us-date__item {
+        background-color: #fff;
+    }
+    
+    .site-about_us .about_us-date__item .about_us-date__number {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 80px;
+        color: #2A3246;
+        background-color: #fff;
+    }
+    
+    .site-about_us .about_us-date__item .about_us-date__text {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+        color: #8F95A5;
+        background-color: #fff;
+    }
+    
+    .site-about_us__title {
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 80px;
+        text-transform: capitalize;
+        color: #000000;
+        background-color: #fff;
+        text-align: left;
+    }
+    
+    .site-about_us__img {
+        background-color: #fff;
+    }
+    
+    .site-pricing {
+        margin: 50px auto;
+        background-color: #fff;
+    }
+    
+    .site-pricing__title {
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 80px;
+        text-transform: capitalize;
+        color: #000000;
+        background-color: #fff;
+        text-align: center;
+    }
+    
+    .site-pricing__cards {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        background-color: #fff;
+    }
+    
+    .pricing-card {
+        width: 30%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        background-color: #fff;
+    }
+    
+    .pricing-card__img {
+        width: 350px;
+        height: 350px;
+        background-color: #fff;
+    }
+    
+    .pricing-card__date {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        height: 300px;
+        background-color: #fff;
+    }
+    
+    .pricing-card__text {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+        color: #8F95A5;
+        background-color: #fff;
+    }
+    
+    .pricing-card__title {
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 30px;
+        text-align: left;
+        background: #F5F5F5;
+        color: #263238;
+        background-color: #fff;
+    }
+    
+    .pricing-card__button {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+        width: 240px;
+        height: 45px;
+        left: 130px;
+        top: 3624px;
+        background: #EEEEEE;
+        border-radius: 5px;
+        text-decoration: none;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 45px;
+        color: #263238;
+    }
+    
+    .pricing-card__mony {
+        background: #EEEEEE;
+    }
+    
+    .button-text {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 27px;
+        color: #546269;
+        background: #EEEEEE;
+    }
+    
+    .site-contact_us {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        margin: 200px auto;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        background-color: #fff;
+    }
+    
+    .site-contact_us__img {
+        background-color: #fff;
+    }
+    
+    .site-contact_us__date {
+        width: 60%;
+        background-color: #fff;
+    }
+    
+    .site-contact_us__title {
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 80px;
+        text-transform: capitalize;
+        color: #000000;
+        background-color: #fff;
+        text-align: left;
+    }
+    
+    .site-contact_us .site-contact_us__text {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+        color: #8F95A5;
+        background-color: #fff;
+    }
+    
+    .site-contact_us__input {
+        background-color: #fff;
+    }
+    
+    .site-contact_us__input-mail {
+        width: 450px;
+        height: 80px;
+        padding-left: 30px;
+        border: 1px solid #8F95A5;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        border-radius: 10px;
+        background-color: #fff;
+    }
+    
+    .site-contact_us__input-mail-button {
+        width: 264px;
+        height: 80px;
+        margin-left: 12px;
+        background: #263238;
+        border-radius: 10px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 30px;
+        color: #FFFFFF;
+    }
+    
+    .site-bootom-line {
+        position: relative;
+        bottom: 0;
+        width: 1340px;
+        background-color: #fff;
+    }
+    
+    .site-footer {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        padding: 50px auto;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        background-color: #fff;
+    }
+    
+    .site-footer__logo {
+        display: block;
+        background-color: #fff;
+    }
+    
+    .site-footer__link--list {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        background-color: #fff;
+    }
+    
+    .footer-list__item {
+        margin-left: 30px;
+        list-style-type: disc;
+        background-color: #fff;
+    }
+    
+    .footer-list__link {
+        text-decoration: none;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 36px;
+        color: #8F95A5;
+        background-color: #fff;
+    }
+    /*# sourceMappingURL=styles.css.map */
