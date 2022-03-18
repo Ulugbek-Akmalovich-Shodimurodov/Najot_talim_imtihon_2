@@ -493,9 +493,17 @@
             }
         }
         
-        @media (max-width: 992px) {
-            .site-logo__img {
-                width: 10px;
-                height: 5px;
+        .footer {
+            background-color: red;
+        }
+        
+        @media (max-width) {
+            .site-logo {
+                display: block;
+                &__img {
+                    height: 54px;
+                    width: 156px;
+                    background-color: $bgc-color;
+                }
             }
         }
