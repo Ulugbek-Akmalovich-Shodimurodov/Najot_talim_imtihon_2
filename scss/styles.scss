@@ -1152,260 +1152,260 @@
             }
         }
         
-        @media (max-width: 767px) {
-            @mixin site-title {
-                font-size: 30px;
-            }
-            @mixin cards-text {
-                font-size: 13px;
-                line-height: 21px;
-            }
-            @mixin cards-title {
-                font-size: 20px;
-                line-height: 40px;
-            }
-            .container {
-                width: 530px;
-                margin-left: auto;
-                margin-right: auto;
-                padding: 0px 15px;
-                border: 1px solid #000;
-            }
-            .site-logo {
-                display: block;
-                padding: 15px;
-                &__img {
-                    width: 59px;
-                    height: 25px;
-                }
-            }
-            .site-nav {
-                display: none;
-            }
-            .site-call {
-                display: none;
-            }
-            .site-nav__burger {
-                background-color: $bgc-color;
-                display: block;
-                padding: 15px;
-            }
-            .bureger__img {
-                width: 30px;
-                height: 17px;
-                background: $bgc-color;
-            }
-            .site-hero {
-                position: relative;
-                &__title {
-                    @include site-title;
-                    font-size: 36px;
-                    line-height: 45px;
-                }
-                &__text {
-                    @include cards-text;
-                    font-size: 16px;
-                    width: 98%;
-                }
-                &__button {
-                    padding: 25px 60px;
-                }
-                &__icon {
-                    position: absolute;
-                    top: 80px;
-                    left: 230px;
-                    width: 58.71px;
-                    height: 58.71px;
-                }
-                &__img {
-                    width: 352px;
-                    height: 352px;
-                    background-color: $bgc-color;
-                }
-            }
-            .site-skills {
-                // margin: 40px auto;
-                background-color: $bgc-color;
-                &__title {
-                    @include site-title;
-                    margin: 50px auto;
-                }
-            }
-            .skills-cards {
-                &__speaking {
-                    align-items: start;
-                    width: 224px;
-                    height: 662px;
-                    .speaking__img {
-                        width: 214px;
-                        height: 214px;
-                    }
-                }
-                &__writing {
-                    position: relative;
-                    text-align: center;
-                    width: 227px;
-                    height: 441px;
-                    border-radius: 10px;
-                    background: #F5F5F5;
-                    .writing__img {
-                        width: 200px;
-                        height: 200px;
-                    }
-                }
-                &__reading {
-                    position: relative;
-                    text-align: start;
-                    width: 227px;
-                    height: 441px;
-                    border-radius: 10px;
-                    background: #F5F5F5;
-                    .reading__img {
-                        width: 200px;
-                        height: 200px;
-                    }
-                }
-                &__listening {
-                    display: flex;
-                    align-items: start;
-                    width: 462px;
-                    height: 210px;
-                    .lestining_img {
-                        margin-top: 30px;
-                        width: 202px;
-                        height: 134px;
-                    }
-                }
-                &__title {
-                    @include cards-title;
-                    font-size: 20px;
-                    line-height: 16px
-                }
-                &__text {
-                    @include cards-text;
-                    font-size: 13px;
-                    line-height: 19px;
-                    width: 80%;
-                    background: #F5F5F5;
-                }
-                .cards-button {
-                    width: 138px;
-                    height: 35px;
-                    bottom: 30px;
-                    font-size: 16px;
-                    line-height: 27px;
-                    color: #FFFFFF;
-                }
-            }
-            .site-about_us {
-                display: flex;
-                align-items: center;
-                .about_us {
-                    &-date {
-                        width: 53%;
-                    }
-                    &__text {
-                        @include cards-text;
-                    }
-                    &-date__item {
-                        .about_us-date {
-                            &__number {
-                                font-size: 22px;
-                                line-height: 30px;
-                            }
-                            &__text {
-                                font-size: 13px;
-                                line-height: 24px;
-                            }
-                        }
-                    }
-                }
-                &__title {
-                    @include site-title;
-                    text-align: left;
-                    margin-bottom: 0;
-                    line-height: 50px;
-                }
-                &__img {
-                    width: 295px;
-                    height: 295px;
-                }
-            }
-            .site-pricing {
-                &__title {
-                    @include site-title;
-                }
-            }
-            .site-pricing__cards {
-                display: flex;
-                justify-content: space-around;
-            }
-            .pricing-card {
-                width: 30%;
-                &__img {
-                    width: 197px;
-                    height: 197px;
-                }
-                &__date {
-                    width: 100%;
-                }
-                &__text {
-                    @include cards-text;
-                }
-                &__title {
-                    @include cards-title;
-                    width: 150px;
-                    font-size: 20px;
-                }
-                &__button {
-                    width: 205px;
-                    height: 45px;
-                }
-                &__mony {
-                    font-size: 24px;
-                }
-            }
-            .site-contact_us {
-                display: flex;
-                margin: 70px auto;
-                align-items: center;
-                &__img {
-                    width: 233px;
-                    height: 210px;
-                }
-                &__title {
-                    @include site-title;
-                }
-                .site-contact_us__text {
-                    @include cards-text;
-                }
-                &__input {
-                    &-mail {
-                        width: 253px;
-                        height: 50px;
-                        &-button {
-                            width: 133px;
-                            height: 50px;
-                        }
-                    }
-                }
-            }
-            .site-bootom-line {
-                position: relative;
-                bottom: 0;
-                width: 100%;
-                background-color: $bgc-color;
-            }
-            .site-footer {
-                &__logo {
-                    width: 49px;
-                    height: 15px;
-                }
-                &__link--list {
-                    display: -webkit-box;
-                    display: -ms-flexbox;
-                    display: flex;
-                    background-color: $bgc-color;
-                }
-            }
-        }
+        // @media (max-width: 575px) {
+        //     @mixin site-title {
+        //         font-size: 30px;
+        //     }
+        //     @mixin cards-text {
+        //         font-size: 13px;
+        //         line-height: 21px;
+        //     }
+        //     @mixin cards-title {
+        //         font-size: 20px;
+        //         line-height: 40px;
+        //     }
+        //     .container {
+        //         width: 530px;
+        //         margin-left: auto;
+        //         margin-right: auto;
+        //         padding: 0px 15px;
+        //         border: 1px solid #000;
+        //     }
+        //     .site-logo {
+        //         display: block;
+        //         padding: 15px;
+        //         &__img {
+        //             width: 59px;
+        //             height: 25px;
+        //         }
+        //     }
+        //     .site-nav {
+        //         display: none;
+        //     }
+        //     .site-call {
+        //         display: none;
+        //     }
+        //     .site-nav__burger {
+        //         background-color: $bgc-color;
+        //         display: block;
+        //         padding: 15px;
+        //     }
+        //     .bureger__img {
+        //         width: 30px;
+        //         height: 17px;
+        //         background: $bgc-color;
+        //     }
+        //     .site-hero {
+        //         position: relative;
+        //         &__title {
+        //             @include site-title;
+        //             font-size: 36px;
+        //             line-height: 45px;
+        //         }
+        //         &__text {
+        //             @include cards-text;
+        //             font-size: 16px;
+        //             width: 98%;
+        //         }
+        //         &__button {
+        //             padding: 25px 60px;
+        //         }
+        //         &__icon {
+        //             position: absolute;
+        //             top: 80px;
+        //             left: 230px;
+        //             width: 58.71px;
+        //             height: 58.71px;
+        //         }
+        //         &__img {
+        //             width: 352px;
+        //             height: 352px;
+        //             background-color: $bgc-color;
+        //         }
+        //     }
+        //     .site-skills {
+        //         // margin: 40px auto;
+        //         background-color: $bgc-color;
+        //         &__title {
+        //             @include site-title;
+        //             margin: 50px auto;
+        //         }
+        //     }
+        //     .skills-cards {
+        //         &__speaking {
+        //             align-items: start;
+        //             width: 224px;
+        //             height: 662px;
+        //             .speaking__img {
+        //                 width: 214px;
+        //                 height: 214px;
+        //             }
+        //         }
+        //         &__writing {
+        //             position: relative;
+        //             text-align: center;
+        //             width: 227px;
+        //             height: 441px;
+        //             border-radius: 10px;
+        //             background: #F5F5F5;
+        //             .writing__img {
+        //                 width: 200px;
+        //                 height: 200px;
+        //             }
+        //         }
+        //         &__reading {
+        //             position: relative;
+        //             text-align: start;
+        //             width: 227px;
+        //             height: 441px;
+        //             border-radius: 10px;
+        //             background: #F5F5F5;
+        //             .reading__img {
+        //                 width: 200px;
+        //                 height: 200px;
+        //             }
+        //         }
+        //         &__listening {
+        //             display: flex;
+        //             align-items: start;
+        //             width: 462px;
+        //             height: 210px;
+        //             .lestining_img {
+        //                 margin-top: 30px;
+        //                 width: 202px;
+        //                 height: 134px;
+        //             }
+        //         }
+        //         &__title {
+        //             @include cards-title;
+        //             font-size: 20px;
+        //             line-height: 16px
+        //         }
+        //         &__text {
+        //             @include cards-text;
+        //             font-size: 13px;
+        //             line-height: 19px;
+        //             width: 80%;
+        //             background: #F5F5F5;
+        //         }
+        //         .cards-button {
+        //             width: 138px;
+        //             height: 35px;
+        //             bottom: 30px;
+        //             font-size: 16px;
+        //             line-height: 27px;
+        //             color: #FFFFFF;
+        //         }
+        //     }
+        //     .site-about_us {
+        //         display: flex;
+        //         align-items: center;
+        //         .about_us {
+        //             &-date {
+        //                 width: 53%;
+        //             }
+        //             &__text {
+        //                 @include cards-text;
+        //             }
+        //             &-date__item {
+        //                 .about_us-date {
+        //                     &__number {
+        //                         font-size: 22px;
+        //                         line-height: 30px;
+        //                     }
+        //                     &__text {
+        //                         font-size: 13px;
+        //                         line-height: 24px;
+        //                     }
+        //                 }
+        //             }
+        //         }
+        //         &__title {
+        //             @include site-title;
+        //             text-align: left;
+        //             margin-bottom: 0;
+        //             line-height: 50px;
+        //         }
+        //         &__img {
+        //             width: 295px;
+        //             height: 295px;
+        //         }
+        //     }
+        //     .site-pricing {
+        //         &__title {
+        //             @include site-title;
+        //         }
+        //     }
+        //     .site-pricing__cards {
+        //         display: flex;
+        //         justify-content: space-around;
+        //     }
+        //     .pricing-card {
+        //         width: 30%;
+        //         &__img {
+        //             width: 197px;
+        //             height: 197px;
+        //         }
+        //         &__date {
+        //             width: 100%;
+        //         }
+        //         &__text {
+        //             @include cards-text;
+        //         }
+        //         &__title {
+        //             @include cards-title;
+        //             width: 150px;
+        //             font-size: 20px;
+        //         }
+        //         &__button {
+        //             width: 205px;
+        //             height: 45px;
+        //         }
+        //         &__mony {
+        //             font-size: 24px;
+        //         }
+        //     }
+        //     .site-contact_us {
+        //         display: flex;
+        //         margin: 70px auto;
+        //         align-items: center;
+        //         &__img {
+        //             width: 233px;
+        //             height: 210px;
+        //         }
+        //         &__title {
+        //             @include site-title;
+        //         }
+        //         .site-contact_us__text {
+        //             @include cards-text;
+        //         }
+        //         &__input {
+        //             &-mail {
+        //                 width: 253px;
+        //                 height: 50px;
+        //                 &-button {
+        //                     width: 133px;
+        //                     height: 50px;
+        //                 }
+        //             }
+        //         }
+        //     }
+        //     .site-bootom-line {
+        //         position: relative;
+        //         bottom: 0;
+        //         width: 100%;
+        //         background-color: $bgc-color;
+        //     }
+        //     .site-footer {
+        //         &__logo {
+        //             width: 49px;
+        //             height: 15px;
+        //         }
+        //         &__link--list {
+        //             display: -webkit-box;
+        //             display: -ms-flexbox;
+        //             display: flex;
+        //             background-color: $bgc-color;
+        //         }
+        //     }
+        // }
