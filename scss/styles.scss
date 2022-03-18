@@ -16,6 +16,7 @@
             line-height: 30px;
             text-align: left;
             background: #F5F5F5;
+            text-transform: capitalize;
         }
         
         @mixin cards-text {
@@ -38,6 +39,7 @@
             margin: 0 auto;
             padding: 15px 130px;
             border: 1px solid #000;
+            // border: 1px solid #555;
         }
         
         .site-background-color {
@@ -113,7 +115,12 @@
             color: #000000;
         }
         
+        .site-nav__burger {
+            display: none;
+        }
+        
         .site-hero {
+            position: relative;
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
@@ -143,11 +150,11 @@
             &__icon {
                 position: absolute;
                 top: 150px;
-                right: 100px;
+                left: 400px;
                 background-color: $bgc-color;
             }
             &__img {
-                width: 48%;
+                width: 43%;
                 background-color: $bgc-color;
             }
         }
@@ -268,7 +275,7 @@
                     background-color: $bgc-color;
                 }
                 &__text {
-                    @include site-text;
+                    @include cards-text;
                     background-color: $bgc-color;
                 }
                 &-statistics {
@@ -285,12 +292,20 @@
                     background-color: $bgc-color;
                     .about_us-date {
                         &__number {
-                            @include site-text;
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 48px;
+                            line-height: 80px;
                             color: #2A3246;
                             background-color: $bgc-color;
                         }
                         &__text {
-                            @include site-text;
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 20px;
+                            line-height: 30px;
+                            text-align: center;
+                            color: #8F95A5;
                             background-color: $bgc-color;
                         }
                     }
@@ -358,7 +373,7 @@
                 background-color: $bgc-color;
             }
             &__text {
-                @include site-text;
+                @include cards-text;
                 background-color: $bgc-color;
             }
             &__title {
@@ -394,7 +409,8 @@
         }
         
         .button-text {
-            @include site-text;
+            @include cards-text;
+            font-size: 18px;
             color: #546269;
             background: #EEEEEE;
         }
@@ -420,7 +436,7 @@
                 text-align: left;
             }
             .site-contact_us__text {
-                @include site-text;
+                @include cards-text;
                 background-color: $bgc-color;
             }
             &__input {
@@ -484,25 +500,521 @@
         .footer {
             &-list__item {
                 margin-left: 30px;
-                list-style-type: disc;
                 background-color: $bgc-color;
+            }
+            &-list__item:first-child {
+                list-style-type: none;
             }
             &-list__link {
-                @include site-text;
+                @include cards-text;
+                font-size: 24px;
+                text-decoration: none;
                 background-color: $bgc-color;
             }
         }
         
-        .footer {
-            background-color: red;
-        }
-        
-        @media (max-width) {
+        @media (max-width: 992px) {
+            @mixin site-title {
+                font-size: 36px;
+            }
+            @mixin cards-text {
+                font-size: 14px;
+                line-height: 21px;
+            }
+            @mixin cards-title {
+                font-size: 22px;
+                line-height: 50px;
+            }
+            .container {
+                width: 960px;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 15px 15px;
+                border: 1px solid #000;
+            }
             .site-logo {
                 display: block;
                 &__img {
-                    height: 54px;
-                    width: 156px;
+                    width: 89px;
+                    height: 35px;
+                }
+            }
+            .site-nav {
+                &__item {
+                    margin: 0 25px;
+                }
+                &__link {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+            }
+            .site-call {
+                padding: 6px 30px;
+                font-size: 16px;
+            }
+            .site-hero {
+                position: relative;
+                &__title {
+                    @include site-title;
+                    font-size: 48px;
+                    line-height: 64px;
+                }
+                &__text {
+                    @include cards-text;
+                    font-size: 20px;
+                    width: 98%;
+                }
+                &__button {
+                    padding: 35px 90px;
+                }
+                &__icon {
+                    position: absolute;
+                    top: 120px;
+                    left: 300px;
+                    width: 58.71px;
+                    height: 58.71px;
+                }
+                &__img {
+                    width: 460px;
+                    height: 460px;
+                    background-color: $bgc-color;
+                }
+            }
+            .skills-cards {
+                &__speaking {
+                    width: 303px;
+                    height: 696px;
+                }
+                &__writing {
+                    position: relative;
+                    text-align: center;
+                    width: 302px;
+                    height: 441px;
+                    border-radius: 10px;
+                    background: #F5F5F5;
+                    .writing__img {
+                        width: 243px;
+                        height: 162px;
+                    }
+                }
+                &__reading {
+                    position: relative;
+                    text-align: center;
+                    width: 302px;
+                    height: 441px;
+                    border-radius: 10px;
+                    background: #F5F5F5;
+                    .reading__img {
+                        width: 243px;
+                        height: 162px;
+                    }
+                }
+                &__listening {
+                    display: flex;
+                    align-items: start;
+                    width: 616px;
+                    height: 241px;
+                }
+                &__title {
+                    @include cards-title;
+                    font-size: 22px;
+                    line-height: 20px
+                }
+                &__text {
+                    @include cards-text;
+                    font-size: 14px;
+                    line-height: 21px;
+                    width: 80%;
+                    background: #F5F5F5;
+                }
+                .cards-button {
+                    width: 196px;
+                    height: 57px;
+                    bottom: 30px;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 27px;
+                    color: #FFFFFF;
+                }
+                &__date {
+                    margin-left: 20px;
+                }
+                &__img {
+                    width: 260px;
+                    height: 260px;
+                }
+            }
+            .lestining_img {
+                width: 254px;
+                height: 169px;
+            }
+            .site-about_us {
+                .about_us {
+                    &-date {
+                        width: 50%;
+                    }
+                    &__text {
+                        @include cards-text;
+                    }
+                    &-date__item {
+                        .about_us-date {
+                            &__number {
+                                font-size: 30px;
+                                line-height: 80px;
+                            }
+                            &__text {
+                                font-size: 16px;
+                                line-height: 24px;
+                            }
+                        }
+                    }
+                }
+                &__title {
+                    @include site-title;
+                    text-align: left;
+                }
+                &__img {
+                    width: 336px;
+                    height: 336px;
+                }
+            }
+            .site-pricing {
+                &__title {
+                    @include site-title;
+                    justify-content: space-between;
+                }
+            }
+            .site-pricing__cards {
+                display: flex;
+                justify-content: space-around;
+            }
+            .pricing-card {
+                width: 30%;
+                &__img {
+                    width: 222px;
+                    height: 222px;
+                }
+                &__date {
+                    width: 100%;
+                }
+                &__text {
+                    @include cards-text;
+                    background-color: $bgc-color;
+                }
+                &__title {
+                    @include cards-title;
+                    font-size: 20px;
+                    color: #263238;
+                    background-color: $bgc-color;
+                }
+                &__button {
+                    width: 205px;
+                    height: 45px;
+                }
+                &__mony {
+                    font-size: 24px;
+                }
+            }
+            .site-contact_us {
+                &__img {
+                    width: 312px;
+                    height: 281px;
+                }
+                &__title {
+                    @include site-title;
+                }
+                .site-contact_us__text {
+                    @include cards-text;
+                }
+                &__input {
+                    &-mail {
+                        width: 323px;
+                        height: 60px;
+                        &-button {
+                            width: 193px;
+                            height: 60px;
+                        }
+                    }
+                }
+            }
+            .site-bootom-line {
+                position: relative;
+                bottom: 0;
+                width: 100%;
+                background-color: $bgc-color;
+            }
+            .site-footer {
+                &__logo {
+                    width: 69px;
+                    height: 25px;
+                }
+            }
+            .footer {
+                &-list__item {
+                    margin-left: 30px;
+                    list-style-type: disc;
+                    background-color: $bgc-color;
+                }
+                &-list__link {
+                    @include cards-text;
+                    background-color: $bgc-color;
+                }
+            }
+        }
+        
+        @media (max-width: 767px) {
+            @mixin site-title {
+                font-size: 30px;
+            }
+            @mixin cards-text {
+                font-size: 13px;
+                line-height: 21px;
+            }
+            @mixin cards-title {
+                font-size: 20px;
+                line-height: 40px;
+            }
+            .container {
+                width: 730px;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 0px 15px;
+                border: 1px solid #000;
+            }
+            .site-logo {
+                display: block;
+                padding: 15px;
+                &__img {
+                    width: 59px;
+                    height: 25px;
+                }
+            }
+            .site-nav {
+                display: none;
+            }
+            .site-call {
+                display: none;
+            }
+            .site-nav__burger {
+                background-color: $bgc-color;
+                display: block;
+                padding: 15px;
+            }
+            .bureger__img {
+                width: 30px;
+                height: 17px;
+                background: $bgc-color;
+            }
+            .site-hero {
+                position: relative;
+                &__title {
+                    @include site-title;
+                    font-size: 36px;
+                    line-height: 45px;
+                }
+                &__text {
+                    @include cards-text;
+                    font-size: 16px;
+                    width: 98%;
+                }
+                &__button {
+                    padding: 25px 60px;
+                }
+                &__icon {
+                    position: absolute;
+                    top: 80px;
+                    left: 230px;
+                    width: 58.71px;
+                    height: 58.71px;
+                }
+                &__img {
+                    width: 352px;
+                    height: 352px;
+                    background-color: $bgc-color;
+                }
+            }
+            .site-skills {
+                // margin: 40px auto;
+                background-color: $bgc-color;
+                &__title {
+                    @include site-title;
+                    margin: 50px auto;
+                }
+            }
+            .skills-cards {
+                &__speaking {
+                    align-items: start;
+                    width: 224px;
+                    height: 662px;
+                    .speaking__img {
+                        width: 214px;
+                        height: 214px;
+                    }
+                }
+                &__writing {
+                    position: relative;
+                    text-align: center;
+                    width: 227px;
+                    height: 441px;
+                    border-radius: 10px;
+                    background: #F5F5F5;
+                    .writing__img {
+                        width: 200px;
+                        height: 200px;
+                    }
+                }
+                &__reading {
+                    position: relative;
+                    text-align: start;
+                    width: 227px;
+                    height: 441px;
+                    border-radius: 10px;
+                    background: #F5F5F5;
+                    .reading__img {
+                        width: 200px;
+                        height: 200px;
+                    }
+                }
+                &__listening {
+                    display: flex;
+                    align-items: start;
+                    width: 462px;
+                    height: 210px;
+                    .lestining_img {
+                        width: 202px;
+                        height: 134px;
+                    }
+                }
+                &__title {
+                    @include cards-title;
+                    font-size: 20px;
+                    line-height: 16px
+                }
+                &__text {
+                    @include cards-text;
+                    font-size: 13px;
+                    line-height: 19px;
+                    width: 80%;
+                    background: #F5F5F5;
+                }
+                .cards-button {
+                    width: 138px;
+                    height: 35px;
+                    bottom: 30px;
+                    font-size: 16px;
+                    line-height: 27px;
+                    color: #FFFFFF;
+                }
+            }
+            .site-about_us {
+                display: flex;
+                align-items: center;
+                .about_us {
+                    &-date {
+                        width: 53%;
+                    }
+                    &__text {
+                        @include cards-text;
+                    }
+                    &-date__item {
+                        .about_us-date {
+                            &__number {
+                                font-size: 22px;
+                                line-height: 30px;
+                            }
+                            &__text {
+                                font-size: 13px;
+                                line-height: 24px;
+                            }
+                        }
+                    }
+                }
+                &__title {
+                    @include site-title;
+                    text-align: left;
+                    margin-bottom: 0;
+                    line-height: 50px;
+                }
+                &__img {
+                    width: 295px;
+                    height: 295px;
+                }
+            }
+            .site-pricing {
+                &__title {
+                    @include site-title;
+                }
+            }
+            .site-pricing__cards {
+                display: flex;
+                justify-content: space-around;
+            }
+            .pricing-card {
+                width: 30%;
+                &__img {
+                    width: 197px;
+                    height: 197px;
+                }
+                &__date {
+                    width: 100%;
+                }
+                &__text {
+                    @include cards-text;
+                }
+                &__title {
+                    @include cards-title;
+                    width: 150px;
+                    font-size: 20px;
+                }
+                &__button {
+                    width: 205px;
+                    height: 45px;
+                }
+                &__mony {
+                    font-size: 24px;
+                }
+            }
+            .site-contact_us {
+                display: flex;
+                margin: 70px auto;
+                align-items: center;
+                &__img {
+                    width: 233px;
+                    height: 210px;
+                }
+                &__title {
+                    @include site-title;
+                }
+                .site-contact_us__text {
+                    @include cards-text;
+                }
+                &__input {
+                    &-mail {
+                        width: 253px;
+                        height: 50px;
+                        &-button {
+                            width: 133px;
+                            height: 50px;
+                        }
+                    }
+                }
+            }
+            .site-bootom-line {
+                position: relative;
+                bottom: 0;
+                width: 100%;
+                background-color: $bgc-color;
+            }
+            .site-footer {
+                &__logo {
+                    width: 49px;
+                    height: 15px;
+                }
+                &__link--list {
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
                     background-color: $bgc-color;
                 }
             }

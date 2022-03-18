@@ -1,587 +1,1087 @@
-    * {
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-        font-family: 'poppins';
-        background: #E5E5E5;
-    }
-    
-    .container {
-        width: 1600px;
-        margin: 0 auto;
-        padding: 15px 130px;
-        border: 1px solid #000;
-    }
-    
-    .site-background-color {
-        background-color: #fff;
-    }
-    
-    .site-header {
-        z-index: 1;
-        position: -webkit-sticky;
-        position: sticky;
-        top: 0;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        background-color: #fff;
-    }
-    
-    .site-logo {
-        display: block;
-    }
-    
-    .site-logo__img {
-        height: 54px;
-        width: 156px;
-        background-color: #fff;
-    }
-    
-    .site-nav {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-    }
-    
-    .site-nav__list {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        background-color: #fff;
-    }
-    
-    .site-nav__item {
-        margin: 0 30px;
-        text-decoration: none;
-        list-style: none;
-        background-color: #fff;
-    }
-    
-    .site-nav__link {
-        text-decoration: none;
-        text-transform: capitalize;
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 30px;
-        letter-spacing: 0em;
-        text-align: left;
-        color: #263238;
-        background-color: #fff;
-    }
-    
-    .site-call {
-        text-decoration: none;
-        padding: 10px 40px;
-        text-transform: capitalize;
-        font-size: 20px;
-        font-style: normal;
-        text-align: left;
-        border: 2px solid #263238;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-        border-radius: 5px;
-        color: #000000;
-    }
-    
-    .site-hero {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        background-color: #fff;
-    }
-    
-    .site-hero__text {
-        position: relative;
-        background-color: #fff;
-    }
-    
-    .site-hero__title {
-        font-size: 48px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 80px;
-        text-transform: capitalize;
-        color: #000000;
-        background-color: #fff;
-        font-size: 64px;
-        text-align: left;
-    }
-    
-    .site-hero__text {
-        font-style: normal;
-        font-weight: 400;
-        line-height: 30px;
-        text-align: left;
-        color: #8F95A5;
-        font-size: 24px;
-        width: 78%;
-        background-color: #fff;
-    }
-    
-    .site-hero__button {
-        display: inline-block;
-        text-decoration: none;
-        padding: 30px 90px;
-        background-color: #263238;
-        color: #fff;
-        border-radius: 15px;
-    }
-    
-    .site-hero__icon {
-        position: absolute;
-        top: 150px;
-        right: 100px;
-        background-color: #fff;
-    }
-    
-    .site-hero__img {
-        width: 48%;
-        background-color: #fff;
-    }
-    
-    .site-skills {
-        margin: 40px auto;
-        background-color: #fff;
-    }
-    
-    .site-skills__title {
-        font-size: 48px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 80px;
-        text-transform: capitalize;
-        color: #000000;
-        background-color: #fff;
-        margin: 100px auto;
-        text-align: center;
-    }
-    
-    .skills-cards {
-        display: -ms-grid;
-        display: grid;
-        -ms-grid-columns: 32% 2% 32% 2% 32%;
-        grid-template-columns: 32% 32% 32%;
-        gap: 2%;
-        background-color: #fff;
-    }
-    
-    .skills-cards__speaking {
-        position: relative;
-        text-align: center;
-        grid-row-start: 1;
-        -ms-grid-row-span: 2;
-        grid-row-end: 3;
-        height: 894px;
-        width: 435px;
-        border-radius: 10px;
-        background: #F5F5F5;
-    }
-    
-    .skills-cards__writing {
-        position: relative;
-        text-align: center;
-        height: 531px;
-        width: 434px;
-        border-radius: 10px;
-        background: #F5F5F5;
-    }
-    
-    .skills-cards__reading {
-        position: relative;
-        text-align: center;
-        height: 531px;
-        width: 434px;
-        border-radius: 10px;
-        background: #F5F5F5;
-    }
-    
-    .skills-cards__listening {
-        position: relative;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        grid-column-start: 2;
-        -ms-grid-column-span: 2;
-        grid-column-end: 4;
-        height: 343px;
-        width: 885px;
-        border-radius: 10px;
-        background: #F5F5F5;
-    }
-    
-    .skills-cards__img {
-        background: #F5F5F5;
-    }
-    
-    .skills-cards__title {
-        font-size: 30px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 30px;
-        text-align: left;
-        background: #F5F5F5;
-    }
-    
-    .skills-cards__text {
-        font-style: normal;
-        font-weight: 400;
-        line-height: 30px;
-        text-align: left;
-        color: #8F95A5;
-        width: 90%;
-        background: #F5F5F5;
-    }
-    
-    .skills-cards .cards-button {
-        position: absolute;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        height: 60px;
-        width: 218px;
-        bottom: 30px;
-        margin-top: 50px;
-        text-decoration: none;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        border-radius: 5px;
-        background: #263238;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 30px;
-        color: #FFFFFF;
-    }
-    
-    .skills-cards__date {
-        margin-left: 20px;
-        background: #F5F5F5;
-    }
-    
-    .site-about_us {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        margin: 100px auto;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        background-color: #fff;
-    }
-    
-    .site-about_us .about_us-date {
-        width: 50%;
-        background-color: #fff;
-    }
-    
-    .site-about_us .about_us__text {
-        font-style: normal;
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 30px;
-        color: #8F95A5;
-        background-color: #fff;
-    }
-    
-    .site-about_us .about_us-statistics {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        text-align: center;
-        background-color: #fff;
-    }
-    
-    .site-about_us .about_us-date__item {
-        background-color: #fff;
-    }
-    
-    .site-about_us .about_us-date__item .about_us-date__number {
-        font-style: normal;
-        font-weight: 600;
-        font-size: 48px;
-        line-height: 80px;
-        color: #2A3246;
-        background-color: #fff;
-    }
-    
-    .site-about_us .about_us-date__item .about_us-date__text {
-        font-style: normal;
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 30px;
-        color: #8F95A5;
-        background-color: #fff;
-    }
-    
-    .site-about_us__title {
-        font-size: 48px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 80px;
-        text-transform: capitalize;
-        color: #000000;
-        background-color: #fff;
-        text-align: left;
-    }
-    
-    .site-about_us__img {
-        background-color: #fff;
-    }
-    
-    .site-pricing {
-        margin: 50px auto;
-        background-color: #fff;
-    }
-    
-    .site-pricing__title {
-        font-size: 48px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 80px;
-        text-transform: capitalize;
-        color: #000000;
-        background-color: #fff;
-        text-align: center;
-    }
-    
-    .site-pricing__cards {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        background-color: #fff;
-    }
-    
-    .pricing-card {
-        width: 30%;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        background-color: #fff;
-    }
-    
-    .pricing-card__img {
-        width: 350px;
-        height: 350px;
-        background-color: #fff;
-    }
-    
-    .pricing-card__date {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-pack: distribute;
-        justify-content: space-around;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-align: start;
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'poppins';
+  background: #E5E5E5;
+}
+
+.container {
+  width: 1600px;
+  margin: 0 auto;
+  padding: 15px 130px;
+  border: 1px solid #000;
+}
+
+.site-background-color {
+  background-color: #fff;
+}
+
+.site-header {
+  z-index: 1;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.site-logo {
+  display: block;
+}
+
+.site-logo__img {
+  height: 54px;
+  width: 156px;
+  background-color: #fff;
+}
+
+.site-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.site-nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #fff;
+}
+
+.site-nav__item {
+  margin: 0 30px;
+  text-decoration: none;
+  list-style: none;
+  background-color: #fff;
+}
+
+.site-nav__link {
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #263238;
+  background-color: #fff;
+}
+
+.site-call {
+  text-decoration: none;
+  padding: 10px 40px;
+  text-transform: capitalize;
+  font-size: 20px;
+  font-style: normal;
+  text-align: left;
+  border: 2px solid #263238;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 5px;
+  color: #000000;
+}
+
+.site-nav__burger {
+  display: none;
+}
+
+.site-hero {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-color: #fff;
+}
+
+.site-hero__title {
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 80px;
+  text-transform: capitalize;
+  color: #000000;
+  background-color: #fff;
+  font-size: 64px;
+  text-align: left;
+}
+
+.site-hero__text {
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+  color: #8F95A5;
+  font-size: 24px;
+  width: 78%;
+  background-color: #fff;
+}
+
+.site-hero__button {
+  display: inline-block;
+  text-decoration: none;
+  padding: 30px 90px;
+  background-color: #263238;
+  color: #fff;
+  border-radius: 15px;
+}
+
+.site-hero__icon {
+  position: absolute;
+  top: 150px;
+  left: 400px;
+  background-color: #fff;
+}
+
+.site-hero__img {
+  width: 43%;
+  background-color: #fff;
+}
+
+.site-skills {
+  margin: 40px auto;
+  background-color: #fff;
+}
+
+.site-skills__title {
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 80px;
+  text-transform: capitalize;
+  color: #000000;
+  background-color: #fff;
+  margin: 100px auto;
+  text-align: center;
+}
+
+.skills-cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 32% 2% 32% 2% 32%;
+  grid-template-columns: 32% 32% 32%;
+  gap: 2%;
+  background-color: #fff;
+}
+
+.skills-cards__speaking {
+  position: relative;
+  text-align: center;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  -ms-grid-row-span: 2;
+  grid-row-end: 3;
+  height: 894px;
+  width: 435px;
+  border-radius: 10px;
+  background: #F5F5F5;
+}
+
+.skills-cards__writing {
+  position: relative;
+  text-align: center;
+  height: 531px;
+  width: 434px;
+  border-radius: 10px;
+  background: #F5F5F5;
+}
+
+.skills-cards__reading {
+  position: relative;
+  text-align: center;
+  height: 531px;
+  width: 434px;
+  border-radius: 10px;
+  background: #F5F5F5;
+}
+
+.skills-cards__listening {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  -ms-grid-column-span: 2;
+  grid-column-end: 4;
+  height: 343px;
+  width: 885px;
+  border-radius: 10px;
+  background: #F5F5F5;
+}
+
+.skills-cards__img {
+  background: #F5F5F5;
+}
+
+.skills-cards__title {
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: left;
+  background: #F5F5F5;
+  text-transform: capitalize;
+}
+
+.skills-cards__text {
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+  color: #8F95A5;
+  width: 90%;
+  background: #F5F5F5;
+}
+
+.skills-cards .cards-button {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 60px;
+  width: 218px;
+  bottom: 30px;
+  margin-top: 50px;
+  text-decoration: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 5px;
+  background: #263238;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #FFFFFF;
+}
+
+.skills-cards__date {
+  margin-left: 20px;
+  background: #F5F5F5;
+}
+
+.site-about_us {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 100px auto;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-color: #fff;
+}
+
+.site-about_us .about_us-date {
+  width: 50%;
+  background-color: #fff;
+}
+
+.site-about_us .about_us__text {
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+  color: #8F95A5;
+  background-color: #fff;
+}
+
+.site-about_us .about_us-statistics {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  text-align: center;
+  background-color: #fff;
+}
+
+.site-about_us .about_us-date__item {
+  background-color: #fff;
+}
+
+.site-about_us .about_us-date__item .about_us-date__number {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 80px;
+  color: #2A3246;
+  background-color: #fff;
+}
+
+.site-about_us .about_us-date__item .about_us-date__text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  color: #8F95A5;
+  background-color: #fff;
+}
+
+.site-about_us__title {
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 80px;
+  text-transform: capitalize;
+  color: #000000;
+  background-color: #fff;
+  text-align: left;
+}
+
+.site-about_us__img {
+  background-color: #fff;
+}
+
+.site-pricing {
+  margin: 50px auto;
+  background-color: #fff;
+}
+
+.site-pricing__title {
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 80px;
+  text-transform: capitalize;
+  color: #000000;
+  background-color: #fff;
+  text-align: center;
+}
+
+.site-pricing__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-color: #fff;
+}
+
+.pricing-card {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.pricing-card__img {
+  width: 350px;
+  height: 350px;
+  background-color: #fff;
+}
+
+.pricing-card__date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  height: 300px;
+  background-color: #fff;
+}
+
+.pricing-card__text {
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+  color: #8F95A5;
+  background-color: #fff;
+}
+
+.pricing-card__title {
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: left;
+  background: #F5F5F5;
+  text-transform: capitalize;
+  color: #263238;
+  background-color: #fff;
+}
+
+.pricing-card__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  width: 240px;
+  height: 45px;
+  left: 130px;
+  top: 3624px;
+  background: #EEEEEE;
+  border-radius: 5px;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 45px;
+  color: #263238;
+}
+
+.pricing-card__mony {
+  background: #EEEEEE;
+}
+
+.button-text {
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+  color: #8F95A5;
+  font-size: 18px;
+  color: #546269;
+  background: #EEEEEE;
+}
+
+.site-contact_us {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 200px auto;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-color: #fff;
+}
+
+.site-contact_us__img {
+  background-color: #fff;
+}
+
+.site-contact_us__date {
+  width: 60%;
+  background-color: #fff;
+}
+
+.site-contact_us__title {
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 80px;
+  text-transform: capitalize;
+  color: #000000;
+  background-color: #fff;
+  text-align: left;
+}
+
+.site-contact_us .site-contact_us__text {
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+  color: #8F95A5;
+  background-color: #fff;
+}
+
+.site-contact_us__input {
+  background-color: #fff;
+}
+
+.site-contact_us__input-mail {
+  width: 450px;
+  height: 80px;
+  padding-left: 30px;
+  border: 1px solid #8F95A5;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.site-contact_us__input-mail-button {
+  width: 264px;
+  height: 80px;
+  margin-left: 12px;
+  background: #263238;
+  border-radius: 10px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #FFFFFF;
+}
+
+.site-bootom-line {
+  position: relative;
+  bottom: 0;
+  width: 1340px;
+  background-color: #fff;
+}
+
+.site-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 50px auto;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.site-footer__logo {
+  display: block;
+  background-color: #fff;
+}
+
+.site-footer__link--list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #fff;
+}
+
+.footer-list__item {
+  margin-left: 30px;
+  background-color: #fff;
+}
+
+.footer-list__item:first-child {
+  list-style-type: none;
+}
+
+.footer-list__link {
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+  color: #8F95A5;
+  font-size: 24px;
+  text-decoration: none;
+  background-color: #fff;
+}
+
+@media (max-width: 992px) {
+  .container {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px 15px;
+    border: 1px solid #000;
+  }
+  .site-logo {
+    display: block;
+  }
+  .site-logo__img {
+    width: 89px;
+    height: 35px;
+  }
+  .site-nav__item {
+    margin: 0 25px;
+  }
+  .site-nav__link {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .site-call {
+    padding: 6px 30px;
+    font-size: 16px;
+  }
+  .site-hero {
+    position: relative;
+  }
+  .site-hero__title {
+    font-size: 36px;
+    font-size: 48px;
+    line-height: 64px;
+  }
+  .site-hero__text {
+    font-size: 14px;
+    line-height: 21px;
+    font-size: 20px;
+    width: 98%;
+  }
+  .site-hero__button {
+    padding: 35px 90px;
+  }
+  .site-hero__icon {
+    position: absolute;
+    top: 120px;
+    left: 300px;
+    width: 58.71px;
+    height: 58.71px;
+  }
+  .site-hero__img {
+    width: 460px;
+    height: 460px;
+    background-color: #fff;
+  }
+  .skills-cards__speaking {
+    width: 303px;
+    height: 696px;
+  }
+  .skills-cards__writing {
+    position: relative;
+    text-align: center;
+    width: 302px;
+    height: 441px;
+    border-radius: 10px;
+    background: #F5F5F5;
+  }
+  .skills-cards__writing .writing__img {
+    width: 243px;
+    height: 162px;
+  }
+  .skills-cards__reading {
+    position: relative;
+    text-align: center;
+    width: 302px;
+    height: 441px;
+    border-radius: 10px;
+    background: #F5F5F5;
+  }
+  .skills-cards__reading .reading__img {
+    width: 243px;
+    height: 162px;
+  }
+  .skills-cards__listening {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
         -ms-flex-align: start;
-        align-items: flex-start;
-        height: 300px;
-        background-color: #fff;
-    }
-    
-    .pricing-card__text {
-        font-style: normal;
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 30px;
-        color: #8F95A5;
-        background-color: #fff;
-    }
-    
-    .pricing-card__title {
-        font-size: 30px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 30px;
-        text-align: left;
-        background: #F5F5F5;
-        color: #263238;
-        background-color: #fff;
-    }
-    
-    .pricing-card__button {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -ms-flex-pack: distribute;
+            align-items: start;
+    width: 616px;
+    height: 241px;
+  }
+  .skills-cards__title {
+    font-size: 22px;
+    line-height: 50px;
+    font-size: 22px;
+    line-height: 20px;
+  }
+  .skills-cards__text {
+    font-size: 14px;
+    line-height: 21px;
+    font-size: 14px;
+    line-height: 21px;
+    width: 80%;
+    background: #F5F5F5;
+  }
+  .skills-cards .cards-button {
+    width: 196px;
+    height: 57px;
+    bottom: 30px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: #FFFFFF;
+  }
+  .skills-cards__date {
+    margin-left: 20px;
+  }
+  .skills-cards__img {
+    width: 260px;
+    height: 260px;
+  }
+  .lestining_img {
+    width: 254px;
+    height: 169px;
+  }
+  .site-about_us .about_us-date {
+    width: 50%;
+  }
+  .site-about_us .about_us__text {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .site-about_us .about_us-date__item .about_us-date__number {
+    font-size: 30px;
+    line-height: 80px;
+  }
+  .site-about_us .about_us-date__item .about_us-date__text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .site-about_us__title {
+    font-size: 36px;
+    text-align: left;
+  }
+  .site-about_us__img {
+    width: 336px;
+    height: 336px;
+  }
+  .site-pricing__title {
+    font-size: 36px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .site-pricing__cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
         justify-content: space-around;
-        width: 240px;
-        height: 45px;
-        left: 130px;
-        top: 3624px;
-        background: #EEEEEE;
-        border-radius: 5px;
-        text-decoration: none;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 30px;
-        line-height: 45px;
-        color: #263238;
-    }
-    
-    .pricing-card__mony {
-        background: #EEEEEE;
-    }
-    
-    .button-text {
-        font-style: normal;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 27px;
-        color: #546269;
-        background: #EEEEEE;
-    }
-    
-    .site-contact_us {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        margin: 200px auto;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        background-color: #fff;
-    }
-    
-    .site-contact_us__img {
-        background-color: #fff;
-    }
-    
-    .site-contact_us__date {
-        width: 60%;
-        background-color: #fff;
-    }
-    
-    .site-contact_us__title {
-        font-size: 48px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 80px;
-        text-transform: capitalize;
-        color: #000000;
-        background-color: #fff;
-        text-align: left;
-    }
-    
-    .site-contact_us .site-contact_us__text {
-        font-style: normal;
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 30px;
-        color: #8F95A5;
-        background-color: #fff;
-    }
-    
-    .site-contact_us__input {
-        background-color: #fff;
-    }
-    
-    .site-contact_us__input-mail {
-        width: 450px;
-        height: 80px;
-        padding-left: 30px;
-        border: 1px solid #8F95A5;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-        border-radius: 10px;
-        background-color: #fff;
-    }
-    
-    .site-contact_us__input-mail-button {
-        width: 264px;
-        height: 80px;
-        margin-left: 12px;
-        background: #263238;
-        border-radius: 10px;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 30px;
-        color: #FFFFFF;
-    }
-    
-    .site-bootom-line {
-        position: relative;
-        bottom: 0;
-        width: 1340px;
-        background-color: #fff;
-    }
-    
-    .site-footer {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        padding: 50px auto;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        -webkit-box-align: center;
+  }
+  .pricing-card {
+    width: 30%;
+  }
+  .pricing-card__img {
+    width: 222px;
+    height: 222px;
+  }
+  .pricing-card__date {
+    width: 100%;
+  }
+  .pricing-card__text {
+    font-size: 14px;
+    line-height: 21px;
+    background-color: #fff;
+  }
+  .pricing-card__title {
+    font-size: 22px;
+    line-height: 50px;
+    font-size: 20px;
+    color: #263238;
+    background-color: #fff;
+  }
+  .pricing-card__button {
+    width: 205px;
+    height: 45px;
+  }
+  .pricing-card__mony {
+    font-size: 24px;
+  }
+  .site-contact_us__img {
+    width: 312px;
+    height: 281px;
+  }
+  .site-contact_us__title {
+    font-size: 36px;
+  }
+  .site-contact_us .site-contact_us__text {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .site-contact_us__input-mail {
+    width: 323px;
+    height: 60px;
+  }
+  .site-contact_us__input-mail-button {
+    width: 193px;
+    height: 60px;
+  }
+  .site-bootom-line {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+  }
+  .site-footer__logo {
+    width: 69px;
+    height: 25px;
+  }
+  .footer-list__item {
+    margin-left: 30px;
+    list-style-type: disc;
+    background-color: #fff;
+  }
+  .footer-list__link {
+    font-size: 14px;
+    line-height: 21px;
+    background-color: #fff;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: 730px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 15px;
+    border: 1px solid #000;
+  }
+  .site-logo {
+    display: block;
+    padding: 15px;
+  }
+  .site-logo__img {
+    width: 59px;
+    height: 25px;
+  }
+  .site-nav {
+    display: none;
+  }
+  .site-call {
+    display: none;
+  }
+  .site-nav__burger {
+    background-color: #fff;
+    display: block;
+    padding: 15px;
+  }
+  .bureger__img {
+    width: 30px;
+    height: 17px;
+    background: #fff;
+  }
+  .site-hero {
+    position: relative;
+  }
+  .site-hero__title {
+    font-size: 30px;
+    font-size: 36px;
+    line-height: 45px;
+  }
+  .site-hero__text {
+    font-size: 13px;
+    line-height: 21px;
+    font-size: 16px;
+    width: 98%;
+  }
+  .site-hero__button {
+    padding: 25px 60px;
+  }
+  .site-hero__icon {
+    position: absolute;
+    top: 80px;
+    left: 230px;
+    width: 58.71px;
+    height: 58.71px;
+  }
+  .site-hero__img {
+    width: 352px;
+    height: 352px;
+    background-color: #fff;
+  }
+  .site-skills {
+    background-color: #fff;
+  }
+  .site-skills__title {
+    font-size: 30px;
+    margin: 50px auto;
+  }
+  .skills-cards__speaking {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    width: 224px;
+    height: 662px;
+  }
+  .skills-cards__speaking .speaking__img {
+    width: 214px;
+    height: 214px;
+  }
+  .skills-cards__writing {
+    position: relative;
+    text-align: center;
+    width: 227px;
+    height: 441px;
+    border-radius: 10px;
+    background: #F5F5F5;
+  }
+  .skills-cards__writing .writing__img {
+    width: 200px;
+    height: 200px;
+  }
+  .skills-cards__reading {
+    position: relative;
+    text-align: start;
+    width: 227px;
+    height: 441px;
+    border-radius: 10px;
+    background: #F5F5F5;
+  }
+  .skills-cards__reading .reading__img {
+    width: 200px;
+    height: 200px;
+  }
+  .skills-cards__listening {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    width: 462px;
+    height: 210px;
+  }
+  .skills-cards__listening .lestining_img {
+    width: 202px;
+    height: 134px;
+  }
+  .skills-cards__title {
+    font-size: 20px;
+    line-height: 40px;
+    font-size: 20px;
+    line-height: 16px;
+  }
+  .skills-cards__text {
+    font-size: 13px;
+    line-height: 21px;
+    font-size: 13px;
+    line-height: 19px;
+    width: 80%;
+    background: #F5F5F5;
+  }
+  .skills-cards .cards-button {
+    width: 138px;
+    height: 35px;
+    bottom: 30px;
+    font-size: 16px;
+    line-height: 27px;
+    color: #FFFFFF;
+  }
+  .site-about_us {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
         -ms-flex-align: center;
-        align-items: center;
-        background-color: #fff;
-    }
-    
-    .site-footer__logo {
-        display: block;
-        background-color: #fff;
-    }
-    
-    .site-footer__link--list {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        background-color: #fff;
-    }
-    
-    .footer-list__item {
-        margin-left: 30px;
-        list-style-type: disc;
-        background-color: #fff;
-    }
-    
-    .footer-list__link {
-        text-decoration: none;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 24px;
-        line-height: 36px;
-        color: #8F95A5;
-        background-color: #fff;
-    }
-    /*# sourceMappingURL=styles.css.map */
+            align-items: center;
+  }
+  .site-about_us .about_us-date {
+    width: 53%;
+  }
+  .site-about_us .about_us__text {
+    font-size: 13px;
+    line-height: 21px;
+  }
+  .site-about_us .about_us-date__item .about_us-date__number {
+    font-size: 22px;
+    line-height: 30px;
+  }
+  .site-about_us .about_us-date__item .about_us-date__text {
+    font-size: 13px;
+    line-height: 24px;
+  }
+  .site-about_us__title {
+    font-size: 30px;
+    text-align: left;
+    margin-bottom: 0;
+    line-height: 50px;
+  }
+  .site-about_us__img {
+    width: 295px;
+    height: 295px;
+  }
+  .site-pricing__title {
+    font-size: 30px;
+  }
+  .site-pricing__cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .pricing-card {
+    width: 30%;
+  }
+  .pricing-card__img {
+    width: 197px;
+    height: 197px;
+  }
+  .pricing-card__date {
+    width: 100%;
+  }
+  .pricing-card__text {
+    font-size: 13px;
+    line-height: 21px;
+  }
+  .pricing-card__title {
+    font-size: 20px;
+    line-height: 40px;
+    width: 150px;
+    font-size: 20px;
+  }
+  .pricing-card__button {
+    width: 205px;
+    height: 45px;
+  }
+  .pricing-card__mony {
+    font-size: 24px;
+  }
+  .site-contact_us {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 70px auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .site-contact_us__img {
+    width: 233px;
+    height: 210px;
+  }
+  .site-contact_us__title {
+    font-size: 30px;
+  }
+  .site-contact_us .site-contact_us__text {
+    font-size: 13px;
+    line-height: 21px;
+  }
+  .site-contact_us__input-mail {
+    width: 253px;
+    height: 50px;
+  }
+  .site-contact_us__input-mail-button {
+    width: 133px;
+    height: 50px;
+  }
+  .site-bootom-line {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+  }
+  .site-footer__logo {
+    width: 49px;
+    height: 15px;
+  }
+  .site-footer__link--list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #fff;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
