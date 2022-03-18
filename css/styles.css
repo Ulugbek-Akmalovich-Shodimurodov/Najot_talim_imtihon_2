@@ -1286,7 +1286,7 @@
   }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 767px) {
   .container {
     width: 530px;
     margin-left: auto;
