@@ -1,1451 +1,1942 @@
-        $bgc-color: #fff;
-        @mixin site-title {
-            font-size: 48px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 80px;
-            text-transform: capitalize;
-            color: #000000;
-            background-color: #fff;
-        }
-        
-        @mixin cards-title {
-            font-size: 30px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 30px;
-            text-align: left;
-            background: #F5F5F5;
-            text-transform: capitalize;
-        }
-        
-        @mixin cards-text {
-            font-style: normal;
-            font-weight: 400;
-            line-height: 30px;
-            text-align: left;
-            color: #8F95A5;
-        }
-        
-        * {
-            -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-            font-family: 'poppins';
-            background: #E5E5E5;
-        }
-        
-        .container {
-            width: 1600px;
-            margin: 0 auto;
-            padding: 15px 130px;
-            border: 1px solid #000;
-            // border: 1px solid #555;
-        }
-        
-        .site-background-color {
+$bgc-color: #fff;
+$bgc-color1:#EEEEEE;
+@mixin site-title {
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 80px;
+    text-transform: capitalize;
+    color: #000000;
+    background-color: $bgc-color;
+}
+
+@mixin cards-title {
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: left;
+    background: #F5F5F5;
+    text-transform: capitalize;
+}
+
+@mixin cards-text {
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: left;
+    color: #8F95A5;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'poppins';
+    background: #E5E5E5;
+}
+
+.container {
+    width: 1600px;
+    margin: 0 auto;
+    padding: 15px 130px;
+}
+
+.site-background-color {
+    background-color: $bgc-color;
+}
+
+.site-header {
+    z-index: 1;
+    position: sticky;
+    top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.site-logo {
+    display: block;
+    &__img {
+        height: 54px;
+        width: 156px;
+        background-color: $bgc-color;
+    }
+}
+
+.site-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    &__list {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        background-color: $bgc-color;
+    }
+    &__item {
+        margin: 0 30px;
+        text-decoration: none;
+        list-style: none;
+        background-color: $bgc-color;
+    }
+    &__link {
+        text-decoration: none;
+        text-transform: capitalize;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 30px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #263238;
+        background-color: $bgc-color;
+    }
+}
+
+.site-call {
+    text-decoration: none;
+    margin-right: 50px;
+    padding: 10px 40px;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-style: normal;
+    text-align: left;
+    border: 2px solid #263238;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #000000;
+}
+
+.site-nav__burger {
+    display: none;
+}
+
+.lab {
+    display: none;
+}
+
+.modal {
+    visibility: visible;
+    display: none;
+    display: block;
+}
+
+.check {
+    visibility: hidden;
+}
+
+.site-burger__list {
+    display: none;
+}
+
+.site-hero {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    background-color: $bgc-color;
+    &__title {
+        @include site-title;
+        font-size: 64px;
+        text-align: left;
+    }
+    &__text {
+        @include cards-text;
+        font-size: 24px;
+        width: 78%;
+        background-color: $bgc-color;
+    }
+    &__button {
+        display: inline-block;
+        text-decoration: none;
+        padding: 30px 90px;
+        background-color: #263238;
+        color: #fff;
+        border-radius: 15px;
+    }
+    &__icon {
+        position: absolute;
+        top: 150px;
+        left: 400px;
+        background-color: $bgc-color;
+    }
+    &__img {
+        width: 43%;
+        background-color: $bgc-color;
+    }
+}
+
+.site-skills {
+    margin: 40px auto;
+    background-color: $bgc-color;
+    &__title {
+        @include site-title;
+        margin: 100px auto;
+        text-align: center;
+    }
+}
+
+.skills-cards {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 32% 2% 32% 2% 32%;
+    grid-template-columns: 32% 32% 32%;
+    gap: 2%;
+    background-color: $bgc-color;
+    &__speaking {
+        position: relative;
+        text-align: center;
+        -ms-grid-row: 1;
+        grid-row-start: 1;
+        -ms-grid-row-span: 2;
+        grid-row-end: 3;
+        height: 894px;
+        width: 435px;
+        border-radius: 10px;
+        background: #F5F5F5;
+    }
+    &__writing {
+        position: relative;
+        text-align: center;
+        height: 531px;
+        width: 434px;
+        border-radius: 10px;
+        background: #F5F5F5;
+    }
+    &__reading {
+        position: relative;
+        text-align: center;
+        height: 531px;
+        width: 434px;
+        border-radius: 10px;
+        background: #F5F5F5;
+    }
+    &__listening {
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-grid-column: 2;
+        grid-column-start: 2;
+        -ms-grid-column-span: 2;
+        grid-column-end: 4;
+        height: 343px;
+        width: 885px;
+        border-radius: 10px;
+        background: #F5F5F5;
+    }
+    &__img {
+        background: #F5F5F5;
+    }
+    &__title {
+        @include cards-title;
+    }
+    &__text {
+        @include cards-text;
+        width: 90%;
+        background: #F5F5F5;
+    }
+    .cards-button {
+        position: absolute;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        height: 60px;
+        width: 218px;
+        bottom: 30px;
+        margin-top: 50px;
+        text-decoration: none;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        border-radius: 5px;
+        background: #263238;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 30px;
+        color: #FFFFFF;
+    }
+    &__date {
+        margin-left: 20px;
+        background: #F5F5F5;
+    }
+}
+
+.site-about_us {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 100px auto;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    background-color: $bgc-color;
+    .about_us {
+        &-date {
+            width: 50%;
             background-color: $bgc-color;
         }
-        
-        .site-header {
-            z-index: 1;
-            position: sticky;
-            top: 0;
+        &__text {
+            @include cards-text;
+            background-color: $bgc-color;
+        }
+        &-statistics {
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
             -webkit-box-pack: justify;
             -ms-flex-pack: justify;
             justify-content: space-between;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center;
-            background-color: #fff;
+            text-align: center;
+            background-color: $bgc-color;
         }
-        
-        .site-logo {
-            display: block;
-            &__img {
-                height: 54px;
-                width: 156px;
-                background-color: $bgc-color;
-            }
-        }
-        
-        .site-nav {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            &__list {
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                background-color: $bgc-color;
-            }
-            &__item {
-                margin: 0 30px;
-                text-decoration: none;
-                list-style: none;
-                background-color: $bgc-color;
-            }
-            &__link {
-                text-decoration: none;
-                text-transform: capitalize;
-                font-size: 20px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: 30px;
-                letter-spacing: 0em;
-                text-align: left;
-                color: #263238;
-                background-color: $bgc-color;
+        &-date__item {
+            background-color: $bgc-color;
+            .about_us-date {
+                &__number {
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 48px;
+                    line-height: 80px;
+                    color: #2A3246;
+                    background-color: $bgc-color;
+                }
+                &__text {
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 30px;
+                    text-align: center;
+                    color: #8F95A5;
+                    background-color: $bgc-color;
+                }
             }
         }
-        
-        .site-call {
-            text-decoration: none;
-            margin-right: 50px;
-            padding: 10px 40px;
-            text-transform: capitalize;
-            font-size: 20px;
-            font-style: normal;
-            text-align: left;
-            border: 2px solid #263238;
+    }
+    &__title {
+        @include site-title;
+        text-align: left;
+    }
+    &__img {
+        background-color: $bgc-color;
+    }
+}
+
+.site-pricing {
+    margin: 50px auto;
+    background-color: $bgc-color;
+    &__title {
+        @include site-title;
+        text-align: center;
+    }
+    &__cards {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        background-color: $bgc-color;
+    }
+}
+
+.pricing-card {
+    width: 30%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: $bgc-color;
+    &__img {
+        width: 350px;
+        height: 350px;
+        background-color: $bgc-color;
+    }
+    &__date {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        height: 300px;
+        background-color: $bgc-color;
+    }
+    &__text {
+        @include cards-text;
+        background-color: $bgc-color;
+    }
+    &__title {
+        @include cards-title;
+        color: #263238;
+        background-color: $bgc-color;
+    }
+    &__button {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+        width: 240px;
+        height: 45px;
+        left: 130px;
+        top: 3624px;
+        background: #EEEEEE;
+        border-radius: 5px;
+        text-decoration: none;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 45px;
+        color: #263238;
+    }
+    &__mony {
+        background: #EEEEEE;
+    }
+}
+
+.button-text {
+    @include cards-text;
+    font-size: 18px;
+    color: #546269;
+    background: #EEEEEE;
+}
+
+.site-contact_us {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 200px auto;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    background-color: $bgc-color;
+    &__img {
+        background-color: $bgc-color;
+    }
+    &__date {
+        width: 60%;
+        background-color: $bgc-color;
+    }
+    &__title {
+        @include site-title;
+        text-align: left;
+    }
+    .site-contact_us__text {
+        @include cards-text;
+        background-color: $bgc-color;
+    }
+    &__input {
+        background-color: $bgc-color;
+        &-mail {
+            width: 450px;
+            height: 80px;
+            padding-left: 30px;
+            border: 1px solid #8F95A5;
             -webkit-box-sizing: border-box;
             box-sizing: border-box;
-            border-radius: 5px;
-            color: #000000;
-        }
-        
-        .site-nav__burger {
-            display: none;
-        }
-        
-        .lab {
-            display: none;
-        }
-        
-        .modal {
-            visibility: visible;
-            display: none;
-            display: block;
-        }
-        
-        .check {
-            visibility: hidden;
-        }
-        
-        .site-burger__list {
-            display: none;
-        }
-        
-        .site-hero {
-            position: relative;
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-            justify-content: space-between;
+            border-radius: 10px;
             background-color: $bgc-color;
-            &__title {
-                @include site-title;
-                font-size: 64px;
-                text-align: left;
-            }
-            &__text {
-                @include cards-text;
-                font-size: 24px;
-                width: 78%;
-                background-color: $bgc-color;
-            }
-            &__button {
-                display: inline-block;
-                text-decoration: none;
-                padding: 30px 90px;
-                background-color: #263238;
-                color: #fff;
-                border-radius: 15px;
-            }
-            &__icon {
-                position: absolute;
-                top: 150px;
-                left: 400px;
-                background-color: $bgc-color;
-            }
-            &__img {
-                width: 43%;
-                background-color: $bgc-color;
-            }
-        }
-        
-        .site-skills {
-            margin: 40px auto;
-            background-color: $bgc-color;
-            &__title {
-                @include site-title;
-                margin: 100px auto;
-                text-align: center;
-            }
-        }
-        
-        .skills-cards {
-            display: -ms-grid;
-            display: grid;
-            -ms-grid-columns: 32% 2% 32% 2% 32%;
-            grid-template-columns: 32% 32% 32%;
-            gap: 2%;
-            background-color: $bgc-color;
-            &__speaking {
-                position: relative;
-                text-align: center;
-                grid-row-start: 1;
-                -ms-grid-row-span: 2;
-                grid-row-end: 3;
-                height: 894px;
-                width: 435px;
-                border-radius: 10px;
-                background: #F5F5F5;
-            }
-            &__writing {
-                position: relative;
-                text-align: center;
-                height: 531px;
-                width: 434px;
-                border-radius: 10px;
-                background: #F5F5F5;
-            }
-            &__reading {
-                position: relative;
-                text-align: center;
-                height: 531px;
-                width: 434px;
-                border-radius: 10px;
-                background: #F5F5F5;
-            }
-            &__listening {
-                position: relative;
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                -webkit-box-align: center;
-                -ms-flex-align: center;
-                align-items: center;
-                grid-column-start: 2;
-                -ms-grid-column-span: 2;
-                grid-column-end: 4;
-                height: 343px;
-                width: 885px;
-                border-radius: 10px;
-                background: #F5F5F5;
-            }
-            &__img {
-                background: #F5F5F5;
-            }
-            &__title {
-                @include cards-title;
-            }
-            &__text {
-                @include cards-text;
-                width: 90%;
-                background: #F5F5F5;
-            }
-            .cards-button {
-                position: absolute;
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                height: 60px;
-                width: 218px;
-                bottom: 30px;
-                margin-top: 50px;
-                text-decoration: none;
-                -webkit-box-pack: center;
-                -ms-flex-pack: center;
-                justify-content: center;
-                -webkit-box-align: center;
-                -ms-flex-align: center;
-                align-items: center;
-                border-radius: 5px;
+            &-button {
+                width: 264px;
+                height: 80px;
+                margin-left: 12px;
                 background: #263238;
+                border-radius: 10px;
                 font-style: normal;
                 font-weight: 500;
                 font-size: 20px;
                 line-height: 30px;
                 color: #FFFFFF;
             }
-            &__date {
-                margin-left: 20px;
-                background: #F5F5F5;
+        }
+    }
+}
+
+.site-bootom-line {
+    position: relative;
+    bottom: 0;
+    width: 1340px;
+    background-color: $bgc-color;
+}
+
+.site-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 50px auto;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: $bgc-color;
+    &__logo {
+        display: block;
+        background-color: $bgc-color;
+    }
+    &__link--list {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        background-color: $bgc-color;
+    }
+}
+
+.footer {
+    &-list__item {
+        margin-left: 30px;
+        background-color: $bgc-color;
+    }
+    &-list__item:first-child {
+        list-style-type: none;
+    }
+    &-list__link {
+        @include cards-text;
+        font-size: 24px;
+        text-decoration: none;
+        background-color: $bgc-color;
+    }
+}
+
+@media (max-width: 992px) {
+    @mixin site-title {
+        font-size: 36px;
+    }
+    @mixin cards-text {
+        font-size: 14px;
+        line-height: 21px;
+    }
+    @mixin cards-title {
+        font-size: 22px;
+        line-height: 50px;
+    }
+    .container {
+        width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 15px 15px;
+    }
+    .site-logo {
+        display: block;
+        &__img {
+            width: 89px;
+            height: 35px;
+        }
+    }
+    .site-nav {
+        &__item {
+            margin: 0 25px;
+        }
+        &__link {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+    .site-call {
+        padding: 6px 30px;
+        font-size: 16px;
+    }
+    .site-hero {
+        position: relative;
+        &__title {
+            @include site-title;
+            font-size: 48px;
+            line-height: 64px;
+        }
+        &__text {
+            @include cards-text;
+            font-size: 20px;
+            width: 98%;
+        }
+        &__button {
+            padding: 35px 90px;
+        }
+        &__icon {
+            position: absolute;
+            top: 120px;
+            left: 300px;
+            width: 58.71px;
+            height: 58.71px;
+        }
+        &__img {
+            width: 460px;
+            height: 460px;
+            background-color: $bgc-color;
+        }
+    }
+    .skills-cards {
+        &__speaking {
+            width: 303px;
+            height: 696px;
+        }
+        &__writing {
+            position: relative;
+            text-align: center;
+            width: 302px;
+            height: 441px;
+            border-radius: 10px;
+            background: #F5F5F5;
+            .writing__img {
+                width: 243px;
+                height: 162px;
             }
         }
-        
-        .site-about_us {
+        &__reading {
+            position: relative;
+            text-align: center;
+            width: 302px;
+            height: 441px;
+            border-radius: 10px;
+            background: #F5F5F5;
+            .reading__img {
+                width: 243px;
+                height: 162px;
+            }
+        }
+        &__listening {
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
-            margin: 100px auto;
-            -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-            justify-content: space-between;
-            background-color: $bgc-color;
-            .about_us {
-                &-date {
-                    width: 50%;
-                    background-color: $bgc-color;
-                }
-                &__text {
-                    @include cards-text;
-                    background-color: $bgc-color;
-                }
-                &-statistics {
-                    display: -webkit-box;
-                    display: -ms-flexbox;
-                    display: flex;
-                    -webkit-box-pack: justify;
-                    -ms-flex-pack: justify;
-                    justify-content: space-between;
-                    text-align: center;
-                    background-color: $bgc-color;
-                }
-                &-date__item {
-                    background-color: $bgc-color;
-                    .about_us-date {
-                        &__number {
-                            font-style: normal;
-                            font-weight: 600;
-                            font-size: 48px;
-                            line-height: 80px;
-                            color: #2A3246;
-                            background-color: $bgc-color;
-                        }
-                        &__text {
-                            font-style: normal;
-                            font-weight: 400;
-                            font-size: 20px;
-                            line-height: 30px;
-                            text-align: center;
-                            color: #8F95A5;
-                            background-color: $bgc-color;
-                        }
+            -webkit-box-align: start;
+            -ms-flex-align: start;
+            align-items: start;
+            width: 616px;
+            height: 241px;
+        }
+        &__title {
+            @include cards-title;
+            font-size: 22px;
+            line-height: 20px
+        }
+        &__text {
+            @include cards-text;
+            font-size: 14px;
+            line-height: 21px;
+            width: 80%;
+            background: #F5F5F5;
+        }
+        .cards-button {
+            width: 196px;
+            height: 57px;
+            bottom: 30px;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 27px;
+            color: #FFFFFF;
+        }
+        &__date {
+            margin-left: 20px;
+        }
+        &__img {
+            width: 260px;
+            height: 260px;
+        }
+    }
+    .lestining_img {
+        width: 254px;
+        height: 169px;
+    }
+    .site-about_us {
+        .about_us {
+            &-date {
+                width: 50%;
+            }
+            &__text {
+                @include cards-text;
+            }
+            &-date__item {
+                .about_us-date {
+                    &__number {
+                        font-size: 30px;
+                        line-height: 80px;
+                    }
+                    &__text {
+                        font-size: 16px;
+                        line-height: 24px;
                     }
                 }
             }
-            &__title {
-                @include site-title;
-                text-align: left;
-            }
-            &__img {
-                background-color: $bgc-color;
-            }
         }
-        
-        .site-pricing {
-            margin: 50px auto;
-            background-color: $bgc-color;
-            &__title {
-                @include site-title;
-                text-align: center;
-            }
-            &__cards {
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                -webkit-box-pack: justify;
-                -ms-flex-pack: justify;
-                justify-content: space-between;
-                background-color: $bgc-color;
-            }
+        &__title {
+            @include site-title;
+            text-align: left;
         }
-        
-        .pricing-card {
-            width: 30%;
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
+        &__img {
+            width: 336px;
+            height: 336px;
+        }
+    }
+    .site-pricing {
+        &__title {
+            @include site-title;
             -webkit-box-pack: justify;
             -ms-flex-pack: justify;
             justify-content: space-between;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-            flex-direction: column;
+        }
+    }
+    .site-pricing__cards {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+    }
+    .pricing-card {
+        width: 30%;
+        &__img {
+            width: 222px;
+            height: 222px;
+        }
+        &__date {
+            width: 100%;
+        }
+        &__text {
+            @include cards-text;
             background-color: $bgc-color;
-            &__img {
-                width: 350px;
-                height: 350px;
-                background-color: $bgc-color;
+        }
+        &__title {
+            @include cards-title;
+            font-size: 20px;
+            color: #263238;
+            background-color: $bgc-color;
+        }
+        &__button {
+            width: 205px;
+            height: 45px;
+        }
+        &__mony {
+            font-size: 24px;
+        }
+    }
+    .site-contact_us {
+        &__img {
+            width: 312px;
+            height: 281px;
+        }
+        &__title {
+            @include site-title;
+        }
+        .site-contact_us__text {
+            @include cards-text;
+        }
+        &__input {
+            &-mail {
+                width: 323px;
+                height: 60px;
+                &-button {
+                    width: 193px;
+                    height: 60px;
+                }
             }
-            &__date {
+        }
+    }
+    .site-bootom-line {
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        background-color: $bgc-color;
+    }
+    .site-footer {
+        &__logo {
+            width: 69px;
+            height: 25px;
+        }
+    }
+    .footer {
+        &-list__item {
+            margin-left: 30px;
+            list-style-type: disc;
+            background-color: $bgc-color;
+        }
+        &-list__link {
+            @include cards-text;
+            background-color: $bgc-color;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    @mixin site-title {
+        font-size: 30px;
+    }
+    @mixin cards-text {
+        font-size: 13px;
+        line-height: 21px;
+    }
+    @mixin cards-title {
+        font-size: 20px;
+        line-height: 40px;
+    }
+    .container {
+        width: 730px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0px 15px;
+    }
+    .site-logo {
+        display: block;
+        padding: 15px;
+        &__img {
+            width: 59px;
+            height: 25px;
+        }
+    }
+    .site-nav {
+        display: none;
+    }
+    .site-call {
+        display: none;
+    }
+    .site-nav__burger {
+        background-color: $bgc-color;
+        display: block;
+        padding: 15px;
+    }
+    .lab {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        background-color: $bgc-color;
+    }
+    .modal {
+        display: none;
+        position: absolute;
+        top: 68px;
+        display: block;
+        width: 250px;
+        height: 310px;
+        padding: 10px;
+        -webkit-box-shadow: 0 0 5px 1px #777;
+        box-shadow: 0 0 5px 1px #777;
+        background-color: $bgc-color;
+        -webkit-transform: translateX(-150px);
+        -ms-transform: translateX(-150px);
+        transform: translateX(-150px);
+        opacity: 1;
+        -webkit-transition: all 1s ease-in-out;
+        -o-transition: all 1s ease-in-out;
+        transition: all 1s ease-in-out;
+    }
+    .check {
+        visibility: hidden;
+        background-color: $bgc-color;
+    }
+    .bureger__img {
+        margin-top: 15px;
+        margin-right: 15px;
+        background-color: $bgc-color;
+    }
+    .site-nav__close {
+        background-color: $bgc-color;
+        display: none;
+    }
+    .check:checked~.modal {
+        background-color: $bgc-color;
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 0;
+    }
+    .nav-close {
+        width: 35px;
+        height: 35px;
+        margin-top: 15px;
+        margin-right: 15px;
+        background-color: $bgc-color;
+    }
+    .site-burger {
+        padding: 15px;
+        background-color: $bgc-color;
+    }
+    .site-burger__list {
+        display: block;
+        list-style-type: none;
+        background-color: $bgc-color;
+    }
+    .site-burger__item {
+        background-color: $bgc-color;
+    }
+    .site-burger__link {
+        text-decoration: none;
+        text-transform: capitalize;
+        color: #000;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 2;
+        background-color: $bgc-color;
+    }
+    .site-burger__call1 {
+        text-decoration: none;
+    }
+    .animation__tel {
+        padding: 5px 10px;
+        margin-left: 55px;
+        margin-right: 30px;
+        color: #000;
+        background-color: greenyellow;
+        border-radius: 5px;
+        -webkit-transition: all 0.1s;
+        -o-transition: all 0.1s;
+        transition: all 0.1s;
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-animation: call 1s cubic-bezier(0.075, 0.82, 0.165, 1) 1s infinite;
+        animation: call 1s cubic-bezier(0.075, 0.82, 0.165, 1) 1s infinite;
+    }
+    @-webkit-keyframes call {
+        0% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+        25% {
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+        50% {
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+        100% {
+            -webkit-transform: rotate(1);
+            transform: rotate(1);
+        }
+    }
+    @keyframes call {
+        0% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+        25% {
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+        50% {
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+        100% {
+            -webkit-transform: rotate(1);
+            transform: rotate(1);
+        }
+    }
+    .site-burger__call2 {
+        text-decoration: none;
+    }
+    .animation__sms {
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        padding: 5px 10px;
+        margin-right: 30px;
+        color: #000;
+        background-color: yellow;
+        border-radius: 5px;
+        -webkit-animation: sms 2s 1s infinite;
+        animation: sms 2s 1s infinite;
+    }
+    @-webkit-keyframes sms {
+        0% {
+            -webkit-transition: all 0.1s;
+            -o-transition: all 0.1s;
+            transition: all 0.1s;
+            -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+        }
+        25% {
+            -webkit-transition: all 0.1s;
+            -o-transition: all 0.1s;
+            transition: all 0.1s;
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+        50% {
+            -webkit-transition: all 0.1s;
+            -o-transition: all 0.1s;
+            transition: all 0.1s;
+            -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+        }
+        100% {
+            -webkit-transition: all 0.1s;
+            -o-transition: all 0.1s;
+            transition: all 0.1s;
+            -webkit-transform: rotate(0);
+            transform: rotate(0);
+        }
+    }
+    @keyframes sms {
+        0% {
+            -webkit-transition: all 0.1s;
+            -o-transition: all 0.1s;
+            transition: all 0.1s;
+            -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+        }
+        25% {
+            -webkit-transition: all 0.1s;
+            -o-transition: all 0.1s;
+            transition: all 0.1s;
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+        50% {
+            -webkit-transition: all 0.1s;
+            -o-transition: all 0.1s;
+            transition: all 0.1s;
+            -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+        }
+        100% {
+            -webkit-transition: all 0.1s;
+            -o-transition: all 0.1s;
+            transition: all 0.1s;
+            -webkit-transform: rotate(0);
+            transform: rotate(0);
+        }
+    }
+    .icon__bgc1 {
+        background-color: greenyellow;
+    }
+    .icon__bgc2 {
+        background-color: yellow;
+    }
+    .site-hero {
+        position: relative;
+        &__title {
+            @include site-title;
+            font-size: 36px;
+            line-height: 45px;
+        }
+        &__text {
+            @include cards-text;
+            font-size: 16px;
+            width: 98%;
+        }
+        &__button {
+            padding: 25px 60px;
+        }
+        &__icon {
+            position: absolute;
+            top: 80px;
+            left: 230px;
+            width: 58.71px;
+            height: 58.71px;
+        }
+        &__img {
+            width: 352px;
+            height: 352px;
+            background-color: $bgc-color;
+        }
+    }
+    .site-skills {
+        background-color: $bgc-color;
+        &__title {
+            @include site-title;
+            margin: 50px auto;
+        }
+    }
+    .skills-cards {
+        &__speaking {
+            -webkit-box-align: start;
+            -ms-flex-align: start;
+            align-items: start;
+            width: 224px;
+            height: 662px;
+            .speaking__img {
+                width: 214px;
+                height: 214px;
+            }
+        }
+        &__writing {
+            position: relative;
+            text-align: center;
+            width: 227px;
+            height: 441px;
+            border-radius: 10px;
+            background: #F5F5F5;
+            .writing__img {
+                width: 200px;
+                height: 200px;
+            }
+        }
+        &__reading {
+            position: relative;
+            text-align: start;
+            width: 227px;
+            height: 441px;
+            border-radius: 10px;
+            background: #F5F5F5;
+            .reading__img {
+                width: 200px;
+                height: 200px;
+            }
+        }
+        &__listening {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: start;
+            -ms-flex-align: start;
+            align-items: start;
+            width: 462px;
+            height: 210px;
+            .lestining_img {
+                margin-top: 30px;
+                width: 202px;
+                height: 134px;
+            }
+        }
+        &__title {
+            @include cards-title;
+            font-size: 20px;
+            line-height: 16px
+        }
+        &__text {
+            @include cards-text;
+            font-size: 13px;
+            line-height: 19px;
+            width: 80%;
+            background: #F5F5F5;
+        }
+        .cards-button {
+            width: 138px;
+            height: 35px;
+            bottom: 30px;
+            font-size: 16px;
+            line-height: 27px;
+            color: #FFFFFF;
+        }
+    }
+    .site-about_us {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        .about_us {
+            &-date {
+                width: 53%;
+            }
+            &__text {
+                @include cards-text;
+            }
+            &-date__item {
+                .about_us-date {
+                    &__number {
+                        font-size: 22px;
+                        line-height: 30px;
+                    }
+                    &__text {
+                        font-size: 13px;
+                        line-height: 24px;
+                    }
+                }
+            }
+        }
+        &__title {
+            @include site-title;
+            text-align: left;
+            margin-bottom: 0;
+            line-height: 50px;
+        }
+        &__img {
+            width: 295px;
+            height: 295px;
+        }
+    }
+    .site-pricing {
+        &__title {
+            @include site-title;
+        }
+    }
+    .site-pricing__cards {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+    }
+    .pricing-card {
+        width: 30%;
+        &__img {
+            width: 197px;
+            height: 197px;
+        }
+        &__date {
+            width: 100%;
+        }
+        &__text {
+            @include cards-text;
+        }
+        &__title {
+            @include cards-title;
+            width: 150px;
+            font-size: 20px;
+        }
+        &__button {
+            width: 205px;
+            height: 45px;
+        }
+        &__mony {
+            font-size: 24px;
+        }
+    }
+    .site-contact_us {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        margin: 70px auto;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        &__img {
+            width: 233px;
+            height: 210px;
+        }
+        &__title {
+            @include site-title;
+        }
+        .site-contact_us__text {
+            @include cards-text;
+        }
+        &__input {
+            &-mail {
+                width: 253px;
+                height: 50px;
+                &-button {
+                    width: 133px;
+                    height: 50px;
+                }
+            }
+        }
+    }
+    .site-bootom-line {
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        background-color: $bgc-color;
+    }
+    .site-footer {
+        &__logo {
+            width: 49px;
+            height: 15px;
+        }
+        &__link--list {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            background-color: $bgc-color;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    @mixin site-title {
+        font-size: 30px;
+    }
+    @mixin cards-text {
+        font-size: 13px;
+        line-height: 21px;
+    }
+    @mixin cards-title {
+        font-size: 20px;
+        line-height: 40px;
+    }
+    .container {
+        width: 530px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0px 15px;
+    }
+    .site-logo {
+        display: block;
+        padding: 15px;
+        &__img {
+            width: 59px;
+            height: 25px;
+        }
+    }
+    .site-nav {
+        display: none;
+    }
+    .site-call {
+        display: none;
+    }
+    .site-nav__burger {
+        background-color: $bgc-color;
+        display: block;
+        padding: 15px;
+    }
+    .bureger__img {
+        width: 30px;
+        height: 17px;
+        background: $bgc-color;
+    }
+    .br__display {
+        display: none;
+    }
+    .site-hero {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        position: relative;
+        &__title {
+            @include site-title;
+            font-size: 32px;
+            line-height: 45px;
+            text-align: center;
+            width: 100%;
+        }
+        &__text {
+            text-align: center;
+        }
+        &__button {
+            width: 305px;
+            height: 75px;
+        }
+        &__icon {
+            display: none;
+        }
+        &__img {
+            width: 352px;
+            height: 352px;
+            background-color: $bgc-color;
+        }
+    }
+    .site-skills {
+        background-color: $bgc-color;
+        &__title {
+            @include site-title;
+            margin: 50px auto;
+        }
+    }
+    .skills-cards {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        &__speaking {
+            -webkit-box-align: start;
+            -ms-flex-align: start;
+            align-items: start;
+            width: 240px;
+            height: 534px;
+            .speaking__img {
+                width: 185px;
+                height: 185px;
+            }
+        }
+        &__writing {
+            position: relative;
+            text-align: center;
+            width: 240px;
+            height: 534px;
+            border-radius: 10px;
+            background: #F5F5F5;
+            .writing__img {
+                width: 185px;
+                height: 185px;
+            }
+        }
+        &__reading {
+            position: relative;
+            text-align: start;
+            margin-top: 10px;
+            width: 240px;
+            height: 534px;
+            border-radius: 10px;
+            background: #F5F5F5;
+            .reading__img {
+                width: 185px;
+                height: 185px;
+            }
+        }
+        &__listening {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: reverse;
+            -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+            -webkit-box-pack: start;
+            -ms-flex-pack: start;
+            justify-content: start;
+            -webkit-box-align: start;
+            -ms-flex-align: start;
+            align-items: start;
+            margin-top: 10px;
+            width: 240px;
+            height: 534px;
+            .lestining_img {
+                margin-top: 30px;
+                width: 225px;
+                height: 185px;
+            }
+        }
+        &__title {
+            @include cards-title;
+            font-size: 20px;
+            line-height: 16px
+        }
+        &__text {
+            @include cards-text;
+            font-size: 12px;
+            line-height: 18px;
+            width: 80%;
+            background: #F5F5F5;
+        }
+        .cards-button {
+            width: 200px;
+            height: 50px;
+            bottom: 30px;
+            font-size: 16px;
+            line-height: 27px;
+            color: #FFFFFF;
+        }
+    }
+    .site-about_us {
+        position: relative;
+        padding-top: 150px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        &__title {
+            position: absolute;
+            top: 0;
+            left: 180px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+        }
+        .about_us {
+            &-statistics {
                 display: -webkit-box;
                 display: -ms-flexbox;
                 display: flex;
                 -ms-flex-pack: distribute;
                 justify-content: space-around;
+            }
+            &-date {
+                width: 100%;
+            }
+            &__text {
+                text-align: center;
+                @include cards-text;
+            }
+            &-date__item {
+                .about_us-date {
+                    &__number {
+                        font-size: 22px;
+                        line-height: 30px;
+                    }
+                    &__text {
+                        font-size: 13px;
+                        line-height: 24px;
+                    }
+                }
+            }
+        }
+        &__title {
+            @include site-title;
+            text-align: left;
+            margin-bottom: 0;
+            line-height: 50px;
+        }
+        &__img {
+            width: 295px;
+            height: 295px;
+        }
+    }
+    .site-pricing {
+        &__title {
+            @include site-title;
+        }
+    }
+    .site-pricing__cards {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    .pricing-card {
+        &__img {
+            margin-left: -50px;
+            width: 291px;
+            height: 291px;
+        }
+        &__date {
+            margin-left: -50px;
+            text-align: center;
+        }
+        &__text {
+            width: 300px;
+            @include cards-text;
+            text-align: center;
+        }
+        &__title {
+            width: 300px;
+            line-height: 20px;
+            @include cards-title;
+            text-align: center;
+            font-size: 20px;
+        }
+        &__button {
+            margin-left: 50px;
+            text-align: center;
+            width: 205px;
+            height: 45px;
+        }
+        &__mony {
+            font-size: 24px;
+        }
+    }
+    .site-contact_us {
+        position: relative;
+        padding-top: 150px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        margin: 70px auto;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        &__title {
+            position: absolute;
+            top: 0px;
+            left: 160px;
+            text-align: center;
+        }
+        &__img {
+            width: 233px;
+            height: 210px;
+        }
+        .site-contact_us__text {
+            @include cards-text;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        &__input {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+        }
+    }
+    .site-bootom-line {
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        background-color: $bgc-color;
+    }
+    .footer {
+        &-list__item {
+            margin-left: 20px;
+        }
+        &-list__link {
+            font-size: 14px;
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    @mixin site-title {
+        font-size: 30px;
+    }
+    @mixin cards-text {
+        font-size: 13px;
+        line-height: 21px;
+    }
+    @mixin cards-title {
+        font-size: 20px;
+        line-height: 40px;
+    }
+    .container {
+        width: 310px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0px 2.5px;
+    }
+    .site-logo {
+        display: block;
+        padding: 15px;
+        &__img {
+            width: 49px;
+            height: 20px;
+        }
+    }
+    .site-nav {
+        display: none;
+    }
+    .site-call {
+        display: none;
+    }
+    .site-nav__burger {
+        background-color: $bgc-color;
+        display: block;
+        padding: 17px;
+    }
+    .bureger__img {
+        width: 25px;
+        height: 12px;
+        margin-top: 5px;
+        margin-right: 5px;
+        background: $bgc-color;
+    }
+    .br__display {
+        display: none;
+    }
+    .modal {
+        position: absolute;
+        top: 55px;
+        height: 310px;
+        width: 310px;
+        -webkit-transform: translateX(-230px);
+        -ms-transform: translateX(-230px);
+        transform: translateX(-230px);
+    }
+    .site-burger {
+        padding: 5px;
+        background-color: $bgc-color;
+    }
+    .site-hero {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        position: relative;
+        &__title {
+            @include site-title;
+            font-size: 24px;
+            line-height: 45px;
+            text-align: center;
+            width: 100%;
+        }
+        &__text {
+            text-align: center;
+            font-size: 14px;
+        }
+        &__button {
+            width: 289px;
+            height: 60px;
+        }
+        &__icon {
+            display: none;
+        }
+        &__img {
+            width: 299px;
+            height: 299px;
+            background-color: $bgc-color;
+        }
+    }
+    .site-skills {
+        background-color: $bgc-color;
+        &__title {
+            @include site-title;
+            margin: 50px auto;
+        }
+    }
+    .skills-cards {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        &__speaking {
+            width: 290px;
+            height: 534px;
+        }
+        &__writing {
+            margin-top: 10px;
+            width: 290px;
+            height: 534px;
+        }
+        &__reading {
+            margin-top: 10px;
+            width: 290px;
+            height: 534px;
+        }
+        &__listening {
+            margin-top: 10px;
+            width: 290px;
+            height: 534px;
+        }
+    }
+    .site-about_us {
+        position: relative;
+        padding-top: 100px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        &__title {
+            left: 90px;
+        }
+        .about_us {
+            &-statistics {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
                 -webkit-box-orient: vertical;
                 -webkit-box-direction: normal;
                 -ms-flex-direction: column;
                 flex-direction: column;
-                -webkit-box-align: start;
-                -ms-flex-align: start;
-                align-items: flex-start;
-                height: 300px;
-                background-color: $bgc-color;
-            }
-            &__text {
-                @include cards-text;
-                background-color: $bgc-color;
-            }
-            &__title {
-                @include cards-title;
-                color: #263238;
-                background-color: $bgc-color;
-            }
-            &__button {
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
                 -webkit-box-align: center;
                 -ms-flex-align: center;
                 align-items: center;
-                -ms-flex-pack: distribute;
-                justify-content: space-around;
-                width: 240px;
-                height: 45px;
-                left: 130px;
-                top: 3624px;
-                background: #EEEEEE;
-                border-radius: 5px;
-                text-decoration: none;
-                font-style: normal;
-                font-weight: 400;
-                font-size: 30px;
-                line-height: 45px;
-                color: #263238;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
             }
-            &__mony {
-                background: #EEEEEE;
+            &-date {
+                width: 90%;
             }
-        }
-        
-        .button-text {
-            @include cards-text;
-            font-size: 18px;
-            color: #546269;
-            background: #EEEEEE;
-        }
-        
-        .site-contact_us {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            margin: 200px auto;
-            -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-            justify-content: space-between;
-            background-color: $bgc-color;
-            &__img {
-                background-color: $bgc-color;
-            }
-            &__date {
-                width: 60%;
-                background-color: $bgc-color;
-            }
-            &__title {
-                @include site-title;
-                text-align: left;
-            }
-            .site-contact_us__text {
-                @include cards-text;
-                background-color: $bgc-color;
-            }
-            &__input {
-                background-color: $bgc-color;
-                &-mail {
-                    width: 450px;
-                    height: 80px;
-                    padding-left: 30px;
-                    border: 1px solid #8F95A5;
-                    -webkit-box-sizing: border-box;
-                    box-sizing: border-box;
-                    border-radius: 10px;
-                    background-color: $bgc-color;
-                    &-button {
-                        width: 264px;
-                        height: 80px;
-                        margin-left: 12px;
-                        background: #263238;
-                        border-radius: 10px;
-                        font-style: normal;
-                        font-weight: 500;
-                        font-size: 20px;
+            &-date__item {
+                .about_us-date {
+                    &__number {
+                        font-size: 22px;
                         line-height: 30px;
-                        color: #FFFFFF;
+                    }
+                    &__text {
+                        font-size: 13px;
+                        line-height: 24px;
                     }
                 }
             }
         }
-        
-        .site-bootom-line {
-            position: relative;
-            bottom: 0;
-            width: 1340px;
-            background-color: $bgc-color;
+        &__title {
+            @include site-title;
+            text-align: left;
+            margin-bottom: 0;
+            line-height: 50px;
         }
-        
-        .site-footer {
+        &__img {
+            width: 283px;
+            height: 283px;
+        }
+    }
+    .site-pricing {
+        &__title {
+            @include site-title;
+        }
+    }
+    .site-pricing__cards {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    .pricing-card {
+        &__img {
+            margin-left: -65px;
+            width: 248px;
+            height: 248px;
+        }
+        &__date {
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            text-align: center;
+        }
+        &__text {
+            width: 300px;
+            @include cards-text;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            margin-left: -55px;
+            text-align: center;
+        }
+        &__title {
+            width: 300px;
+            margin-left: -55px;
+            line-height: 20px;
+            @include cards-title;
+            text-align: center;
+            font-size: 20px;
+        }
+        &__button {
+            margin: 0;
+            text-align: center;
+            width: 205px;
+            height: 45px;
+        }
+        &__mony {
+            font-size: 18px;
+        }
+        .button-text {
+            font-size: 14px;
+        }
+    }
+    .site-contact_us {
+        position: relative;
+        padding-top: 120px;
+        &__title {
+            position: absolute;
+            top: 0px;
+            left: 80px;
+            text-align: center;
+        }
+        &__img {
+            width: 233px;
+            height: 210px;
+        }
+        .site-contact_us__text {
+            @include cards-text;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        &__input {
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
-            padding: 50px auto;
-            -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-            justify-content: space-between;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
             -webkit-box-align: center;
             -ms-flex-align: center;
             align-items: center;
-            background-color: $bgc-color;
-            &__logo {
-                display: block;
-                background-color: $bgc-color;
-            }
-            &__link--list {
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                background-color: $bgc-color;
-            }
-        }
-        
-        .footer {
-            &-list__item {
-                margin-left: 30px;
-                background-color: $bgc-color;
-            }
-            &-list__item:first-child {
-                list-style-type: none;
-            }
-            &-list__link {
-                @include cards-text;
-                font-size: 24px;
-                text-decoration: none;
-                background-color: $bgc-color;
-            }
-        }
-        
-        @media (max-width: 992px) {
-            @mixin site-title {
-                font-size: 36px;
-            }
-            @mixin cards-text {
-                font-size: 14px;
-                line-height: 21px;
-            }
-            @mixin cards-title {
-                font-size: 22px;
-                line-height: 50px;
-            }
-            .container {
-                width: 960px;
-                margin-left: auto;
-                margin-right: auto;
-                padding: 15px 15px;
-                border: 1px solid #000;
-            }
-            .site-logo {
-                display: block;
-                &__img {
-                    width: 89px;
-                    height: 35px;
-                }
-            }
-            .site-nav {
-                &__item {
-                    margin: 0 25px;
-                }
-                &__link {
-                    font-size: 16px;
-                    line-height: 24px;
-                }
-            }
-            .site-call {
-                padding: 6px 30px;
-                font-size: 16px;
-            }
-            .site-hero {
-                position: relative;
-                &__title {
-                    @include site-title;
-                    font-size: 48px;
-                    line-height: 64px;
-                }
-                &__text {
-                    @include cards-text;
-                    font-size: 20px;
-                    width: 98%;
-                }
-                &__button {
-                    padding: 35px 90px;
-                }
-                &__icon {
-                    position: absolute;
-                    top: 120px;
-                    left: 300px;
-                    width: 58.71px;
-                    height: 58.71px;
-                }
-                &__img {
-                    width: 460px;
-                    height: 460px;
-                    background-color: $bgc-color;
-                }
-            }
-            .skills-cards {
-                &__speaking {
-                    width: 303px;
-                    height: 696px;
-                }
-                &__writing {
-                    position: relative;
-                    text-align: center;
-                    width: 302px;
-                    height: 441px;
-                    border-radius: 10px;
-                    background: #F5F5F5;
-                    .writing__img {
-                        width: 243px;
-                        height: 162px;
-                    }
-                }
-                &__reading {
-                    position: relative;
-                    text-align: center;
-                    width: 302px;
-                    height: 441px;
-                    border-radius: 10px;
-                    background: #F5F5F5;
-                    .reading__img {
-                        width: 243px;
-                        height: 162px;
-                    }
-                }
-                &__listening {
-                    display: flex;
-                    align-items: start;
-                    width: 616px;
-                    height: 241px;
-                }
-                &__title {
-                    @include cards-title;
-                    font-size: 22px;
-                    line-height: 20px
-                }
-                &__text {
-                    @include cards-text;
-                    font-size: 14px;
-                    line-height: 21px;
-                    width: 80%;
-                    background: #F5F5F5;
-                }
-                .cards-button {
-                    width: 196px;
-                    height: 57px;
-                    bottom: 30px;
-                    font-style: normal;
-                    font-weight: 500;
-                    font-size: 18px;
-                    line-height: 27px;
-                    color: #FFFFFF;
-                }
-                &__date {
-                    margin-left: 20px;
-                }
-                &__img {
-                    width: 260px;
-                    height: 260px;
-                }
-            }
-            .lestining_img {
-                width: 254px;
-                height: 169px;
-            }
-            .site-about_us {
-                .about_us {
-                    &-date {
-                        width: 50%;
-                    }
-                    &__text {
-                        @include cards-text;
-                    }
-                    &-date__item {
-                        .about_us-date {
-                            &__number {
-                                font-size: 30px;
-                                line-height: 80px;
-                            }
-                            &__text {
-                                font-size: 16px;
-                                line-height: 24px;
-                            }
-                        }
-                    }
-                }
-                &__title {
-                    @include site-title;
-                    text-align: left;
-                }
-                &__img {
-                    width: 336px;
-                    height: 336px;
-                }
-            }
-            .site-pricing {
-                &__title {
-                    @include site-title;
-                    justify-content: space-between;
-                }
-            }
-            .site-pricing__cards {
-                display: flex;
-                justify-content: space-around;
-            }
-            .pricing-card {
-                width: 30%;
-                &__img {
-                    width: 222px;
-                    height: 222px;
-                }
-                &__date {
-                    width: 100%;
-                }
-                &__text {
-                    @include cards-text;
-                    background-color: $bgc-color;
-                }
-                &__title {
-                    @include cards-title;
-                    font-size: 20px;
-                    color: #263238;
-                    background-color: $bgc-color;
-                }
-                &__button {
-                    width: 205px;
-                    height: 45px;
-                }
-                &__mony {
-                    font-size: 24px;
-                }
-            }
-            .site-contact_us {
-                &__img {
-                    width: 312px;
-                    height: 281px;
-                }
-                &__title {
-                    @include site-title;
-                }
-                .site-contact_us__text {
-                    @include cards-text;
-                }
-                &__input {
-                    &-mail {
-                        width: 323px;
-                        height: 60px;
-                        &-button {
-                            width: 193px;
-                            height: 60px;
-                        }
-                    }
-                }
-            }
-            .site-bootom-line {
-                position: relative;
-                bottom: 0;
-                width: 100%;
-                background-color: $bgc-color;
-            }
-            .site-footer {
-                &__logo {
-                    width: 69px;
-                    height: 25px;
-                }
-            }
-            .footer {
-                &-list__item {
-                    margin-left: 30px;
-                    list-style-type: disc;
-                    background-color: $bgc-color;
-                }
-                &-list__link {
-                    @include cards-text;
-                    background-color: $bgc-color;
-                }
-            }
-        }
-        
-        @media (max-width: 767px) {
-            @mixin site-title {
-                font-size: 30px;
-            }
-            @mixin cards-text {
-                font-size: 13px;
-                line-height: 21px;
-            }
-            @mixin cards-title {
-                font-size: 20px;
-                line-height: 40px;
-            }
-            .container {
-                width: 730px;
-                margin-left: auto;
-                margin-right: auto;
-                padding: 0px 15px;
-                border: 1px solid #000;
-            }
-            .site-logo {
-                display: block;
-                padding: 15px;
-                &__img {
-                    width: 59px;
-                    height: 25px;
-                }
-            }
-            .site-nav {
-                display: none;
-            }
-            .site-call {
-                display: none;
-            }
-            .site-nav__burger {
-                background-color: $bgc-color;
-                display: block;
-                padding: 15px;
-            }
-            .lab {
-                display: flex;
-                background-color: #fff;
-            }
-            .modal {
-                display: none;
-                position: absolute;
-                top: 68px;
-                display: block;
-                width: 250px;
-                height: 310px;
-                padding: 10px;
-                box-shadow: 0 0 5px 1px #777;
-                background-color: #fff;
-                transform: translateX(-150px);
-                opacity: 1;
-                transition: all 1s ease-in-out;
-            }
-            .check {
-                visibility: hidden;
-                background-color: #fff;
-            }
-            .bureger__img {
-                margin-top: 15px;
-                margin-right: 15px;
-                background-color: #fff;
-            }
-            .site-nav__close {
-                background-color: #fff;
-                display: none;
-            }
-            .check:checked~.modal {
-                background-color: #fff;
-                transform: translateX(0);
-                opacity: 0;
-            }
-            .nav-close {
-                width: 35px;
-                height: 35px;
-                margin-top: 15px;
-                margin-right: 15px;
-                background-color: #fff;
-            }
-            .site-burger {
-                padding: 15px;
-                background-color: #fff;
-            }
-            .site-burger__list {
-                display: block;
-                list-style-type: none;
-                background-color: #fff;
-            }
-            .site-burger__item {
-                background-color: #fff;
-            }
-            .site-burger__link {
-                text-decoration: none;
-                text-transform: capitalize;
-                color: #000;
-                font-size: 20px;
-                font-weight: 600;
-                line-height: 2;
-                background-color: #fff;
-            }
-            .site-burger__call1 {
-                text-decoration: none;
-            }
-            .animation__tel {
-                padding: 5px 10px;
-                margin-left: 55px;
-                margin-right: 30px;
-                color: #000;
-                background-color: greenyellow;
-                border-radius: 5px;
-                transition: all 0.1s;
-                display: inline-flex;
-                animation: call 1s cubic-bezier(0.075, 0.82, 0.165, 1) 1s infinite;
-            }
-            @keyframes call {
-                0% {
-                    transform: scale(1);
-                }
-                25% {
-                    transform: scale(1.1);
-                }
-                50% {
-                    transform: scale(1.1);
-                }
-                100% {
-                    transform: rotate(1);
-                }
-            }
-            .site-burger__call2 {
-                text-decoration: none;
-            }
-            .animation__sms {
-                display: inline-flex;
-                padding: 5px 10px;
-                margin-right: 30px;
-                color: #000;
-                background-color: yellow;
-                border-radius: 5px;
-                animation: sms 2s 1s infinite;
-            }
-            @keyframes sms {
-                0% {
-                    transition: all 0.1s;
-                    transform: rotate(20deg);
-                }
-                25% {
-                    transition: all 0.1s;
-                    transform: rotate(0deg);
-                }
-                50% {
-                    transition: all 0.1s;
-                    transform: rotate(-20deg);
-                }
-                100% {
-                    transition: all 0.1s;
-                    transform: rotate(0);
-                }
-            }
-            .icon__bgc1 {
-                background-color: greenyellow;
-            }
-            .icon__bgc2 {
-                background-color: yellow;
-            }
-            .site-hero {
-                position: relative;
-                &__title {
-                    @include site-title;
-                    font-size: 36px;
-                    line-height: 45px;
-                }
-                &__text {
-                    @include cards-text;
-                    font-size: 16px;
-                    width: 98%;
-                }
-                &__button {
-                    padding: 25px 60px;
-                }
-                &__icon {
-                    position: absolute;
-                    top: 80px;
-                    left: 230px;
-                    width: 58.71px;
-                    height: 58.71px;
-                }
-                &__img {
-                    width: 352px;
-                    height: 352px;
-                    background-color: $bgc-color;
-                }
-            }
-            .site-skills {
-                // margin: 40px auto;
-                background-color: $bgc-color;
-                &__title {
-                    @include site-title;
-                    margin: 50px auto;
-                }
-            }
-            .skills-cards {
-                &__speaking {
-                    align-items: start;
-                    width: 224px;
-                    height: 662px;
-                    .speaking__img {
-                        width: 214px;
-                        height: 214px;
-                    }
-                }
-                &__writing {
-                    position: relative;
-                    text-align: center;
-                    width: 227px;
-                    height: 441px;
-                    border-radius: 10px;
-                    background: #F5F5F5;
-                    .writing__img {
-                        width: 200px;
-                        height: 200px;
-                    }
-                }
-                &__reading {
-                    position: relative;
-                    text-align: start;
-                    width: 227px;
-                    height: 441px;
-                    border-radius: 10px;
-                    background: #F5F5F5;
-                    .reading__img {
-                        width: 200px;
-                        height: 200px;
-                    }
-                }
-                &__listening {
-                    display: flex;
-                    align-items: start;
-                    width: 462px;
-                    height: 210px;
-                    .lestining_img {
-                        margin-top: 30px;
-                        width: 202px;
-                        height: 134px;
-                    }
-                }
-                &__title {
-                    @include cards-title;
-                    font-size: 20px;
-                    line-height: 16px
-                }
-                &__text {
-                    @include cards-text;
-                    font-size: 13px;
-                    line-height: 19px;
-                    width: 80%;
-                    background: #F5F5F5;
-                }
-                .cards-button {
-                    width: 138px;
-                    height: 35px;
-                    bottom: 30px;
-                    font-size: 16px;
-                    line-height: 27px;
-                    color: #FFFFFF;
-                }
-            }
-            .site-about_us {
-                display: flex;
-                align-items: center;
-                .about_us {
-                    &-date {
-                        width: 53%;
-                    }
-                    &__text {
-                        @include cards-text;
-                    }
-                    &-date__item {
-                        .about_us-date {
-                            &__number {
-                                font-size: 22px;
-                                line-height: 30px;
-                            }
-                            &__text {
-                                font-size: 13px;
-                                line-height: 24px;
-                            }
-                        }
-                    }
-                }
-                &__title {
-                    @include site-title;
-                    text-align: left;
-                    margin-bottom: 0;
-                    line-height: 50px;
-                }
-                &__img {
-                    width: 295px;
-                    height: 295px;
-                }
-            }
-            .site-pricing {
-                &__title {
-                    @include site-title;
-                }
-            }
-            .site-pricing__cards {
-                display: flex;
-                justify-content: space-around;
-            }
-            .pricing-card {
-                width: 30%;
-                &__img {
-                    width: 197px;
-                    height: 197px;
-                }
-                &__date {
-                    width: 100%;
-                }
-                &__text {
-                    @include cards-text;
-                }
-                &__title {
-                    @include cards-title;
-                    width: 150px;
-                    font-size: 20px;
-                }
-                &__button {
-                    width: 205px;
-                    height: 45px;
-                }
-                &__mony {
-                    font-size: 24px;
-                }
-            }
-            .site-contact_us {
-                display: flex;
-                margin: 70px auto;
-                align-items: center;
-                &__img {
-                    width: 233px;
-                    height: 210px;
-                }
-                &__title {
-                    @include site-title;
-                }
-                .site-contact_us__text {
-                    @include cards-text;
-                }
-                &__input {
-                    &-mail {
-                        width: 253px;
-                        height: 50px;
-                        &-button {
-                            width: 133px;
-                            height: 50px;
-                        }
-                    }
-                }
-            }
-            .site-bootom-line {
-                position: relative;
-                bottom: 0;
-                width: 100%;
-                background-color: $bgc-color;
-            }
-            .site-footer {
-                &__logo {
-                    width: 49px;
-                    height: 15px;
-                }
-                &__link--list {
-                    display: -webkit-box;
-                    display: -ms-flexbox;
-                    display: flex;
-                    background-color: $bgc-color;
-                }
-            }
-        }
-        
-        @media (max-width: 575px) {
-            @mixin site-title {
-                font-size: 30px;
-            }
-            @mixin cards-text {
-                font-size: 13px;
-                line-height: 21px;
-            }
-            @mixin cards-title {
-                font-size: 20px;
-                line-height: 40px;
-            }
-            .container {
-                width: 530px;
-                margin-left: auto;
-                margin-right: auto;
-                padding: 0px 15px;
-                border: 1px solid #000;
-            }
-            .site-logo {
-                display: block;
-                padding: 15px;
-                &__img {
-                    width: 59px;
-                    height: 25px;
-                }
-            }
-            .site-nav {
-                display: none;
-            }
-            .site-call {
-                display: none;
-            }
-            .site-nav__burger {
-                background-color: $bgc-color;
-                display: block;
-                padding: 15px;
-            }
-            .bureger__img {
-                width: 30px;
-                height: 17px;
-                background: $bgc-color;
-            }
-            .br__display {
-                display: none;
-            }
-            .site-hero {
-                display: flex;
-                flex-direction: column-reverse;
-                align-items: center;
-                position: relative;
-                &__title {
-                    @include site-title;
-                    font-size: 32px;
-                    line-height: 45px;
-                    text-align: center;
-                    width: 100%;
-                }
-                &__text {
-                    text-align: center;
-                }
-                &__button {
-                    width: 305px;
-                    height: 75px;
-                }
-                &__icon {
-                    display: none;
-                }
-                &__img {
-                    width: 352px;
-                    height: 352px;
-                    background-color: $bgc-color;
-                }
-            }
-            .site-skills {
-                background-color: $bgc-color;
-                &__title {
-                    @include site-title;
-                    margin: 50px auto;
-                }
-            }
-            .skills-cards {
-                display: flex;
-                flex-wrap: wrap;
-                &__speaking {
-                    align-items: start;
-                    width: 240px;
-                    height: 534px;
-                    .speaking__img {
-                        width: 185px;
-                        height: 185px;
-                    }
-                }
-                &__writing {
-                    position: relative;
-                    text-align: center;
-                    width: 240px;
-                    height: 534px;
-                    border-radius: 10px;
-                    background: #F5F5F5;
-                    .writing__img {
-                        width: 185px;
-                        height: 185px;
-                    }
-                }
-                &__reading {
-                    position: relative;
-                    text-align: start;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            &-mail {
+                width: 290px;
+                height: 60px;
+                &-button {
                     margin-top: 10px;
-                    width: 240px;
-                    height: 534px;
-                    border-radius: 10px;
-                    background: #F5F5F5;
-                    .reading__img {
-                        width: 185px;
-                        height: 185px;
-                    }
-                }
-                &__listening {
-                    display: flex;
-                    flex-direction: column-reverse;
-                    justify-content: start;
-                    align-items: start;
-                    margin-top: 10px;
-                    width: 240px;
-                    height: 534px;
-                    .lestining_img {
-                        margin-top: 30px;
-                        width: 225px;
-                        height: 185px;
-                    }
-                }
-                &__title {
-                    @include cards-title;
-                    font-size: 20px;
-                    line-height: 16px
-                }
-                &__text {
-                    @include cards-text;
-                    font-size: 12px;
-                    line-height: 18px;
-                    width: 80%;
-                    background: #F5F5F5;
-                }
-                .cards-button {
-                    width: 200px;
-                    height: 50px;
-                    bottom: 30px;
-                    font-size: 16px;
-                    line-height: 27px;
-                    color: #FFFFFF;
-                }
-            }
-            .site-about_us {
-                position: relative;
-                padding-top: 150px;
-                display: flex;
-                flex-direction: column-reverse;
-                align-items: center;
-                &__title {
-                    position: absolute;
-                    top: 0;
-                    left: 180px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                }
-                .about_us {
-                    &-statistics {
-                        display: flex;
-                        justify-content: space-around;
-                    }
-                    &-date {
-                        width: 100%;
-                    }
-                    &__text {
-                        text-align: center;
-                        @include cards-text;
-                    }
-                    &-date__item {
-                        .about_us-date {
-                            &__number {
-                                font-size: 22px;
-                                line-height: 30px;
-                            }
-                            &__text {
-                                font-size: 13px;
-                                line-height: 24px;
-                            }
-                        }
-                    }
-                }
-                &__title {
-                    @include site-title;
-                    text-align: left;
-                    margin-bottom: 0;
-                    line-height: 50px;
-                }
-                &__img {
-                    width: 295px;
-                    height: 295px;
-                }
-            }
-            .site-pricing {
-                &__title {
-                    @include site-title;
-                }
-            }
-            .site-pricing__cards {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-            .pricing-card {
-                &__img {
-                    margin-left: -50px;
-                    width: 291px;
-                    height: 291px;
-                }
-                &__date {
-                    margin-left: -50px;
-                    text-align: center;
-                }
-                &__text {
-                    width: 300px;
-                    @include cards-text;
-                    text-align: center;
-                }
-                &__title {
-                    width: 300px;
-                    line-height: 20px;
-                    @include cards-title;
-                    text-align: center;
-                    font-size: 20px;
-                }
-                &__button {
-                    margin-left: 50px;
-                    text-align: center;
-                    width: 205px;
-                    height: 45px;
-                }
-                &__mony {
-                    font-size: 24px;
-                }
-            }
-            .site-contact_us {
-                position: relative;
-                padding-top: 150px;
-                display: flex;
-                flex-direction: column;
-                margin: 70px auto;
-                align-items: center;
-                &__title {
-                    position: absolute;
-                    top: 0px;
-                    left: 160px;
-                    text-align: center;
-                }
-                &__img {
-                    width: 233px;
-                    height: 210px;
-                }
-                .site-contact_us__text {
-                    @include cards-text;
-                    text-align: center;
-                    margin-bottom: 50px;
-                }
-                &__input {
-                    display: flex;
-                }
-            }
-            .site-bootom-line {
-                position: relative;
-                bottom: 0;
-                width: 100%;
-                background-color: $bgc-color;
-            }
-            .footer {
-                &-list__item {
-                    margin-left: 20px;
-                }
-                &-list__link {
-                    font-size: 14px;
+                    margin-left: 0px;
+                    width: 290px;
+                    height: 60px;
                 }
             }
         }
+    }
+    .site-bootom-line {
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        background-color: $bgc-color;
+    }
+    .site-footer {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+    .footer-list__link {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-left: 0px;
+        width: 100%;
+        font-size: 8px;
+    }
+    .footer-list__link:first-child {
+        margin-top: -5px;
+        margin-right: 10px;
+    }
+}
